@@ -15,7 +15,7 @@ function App() {
 
       if (deltaY > 0) {
         console.log(pageHeight);
-        if (scrollTop >= 0 && scrollTop + 2 <= pageHeight) {
+        if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
           console.log("현재 1페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight,
@@ -74,6 +74,10 @@ function App() {
         <div className="inner bg-yellow">1</div>
         <div className="inner bg-blue">2</div>
         <div className="inner bg-pink">3</div>
+        <div className="inner bg-yellow">4</div>
+        <div className="inner bg-blue">5</div>
+        
+        <div className="inner bg-pink">6</div>
       </S.mainDiv>
     </>
   );
