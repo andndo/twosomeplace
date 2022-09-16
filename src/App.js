@@ -14,9 +14,8 @@ function App() {
       const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
 
       if (deltaY > 0) {
-        // 스크롤 내릴 때
-        if (scrollTop >= 0 && scrollTop < pageHeight) {
-          //현재 1페이지
+        console.log(pageHeight);
+        if (scrollTop >= 0 && scrollTop + 2 <= pageHeight) {
           console.log("현재 1페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight,
@@ -24,7 +23,6 @@ function App() {
             behavior: "smooth",
           });
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-          //현재 2페이지
           console.log("현재 2페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
@@ -32,7 +30,6 @@ function App() {
             behavior: "smooth",
           });
         } else {
-          // 현재 3페이지
           console.log("현재 3페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
@@ -41,17 +38,14 @@ function App() {
           });
         }
       } else {
-        // 스크롤 올릴 때
-        if (scrollTop >= 0 && scrollTop < pageHeight) {
-          //현재 1페이지
+        if (scrollTop >= 0 && scrollTop <= pageHeight) {
           console.log("현재 1페이지, up");
           outerDivRef.current.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth",
           });
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-          //현재 2페이지
+        } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
           console.log("현재 2페이지, up");
           outerDivRef.current.scrollTo({
             top: 0,
@@ -59,7 +53,6 @@ function App() {
             behavior: "smooth",
           });
         } else {
-          // 현재 3페이지
           console.log("현재 3페이지, up");
           outerDivRef.current.scrollTo({
             top: pageHeight,
@@ -76,11 +69,13 @@ function App() {
     };
   }, []);
   return (
-    <S.mainDiv ref={outerDivRef}>
-      <div className="inner bg-yellow">1</div>
-      <div className="inner bg-blue">2</div>
-      <div className="inner bg-pink">3</div>
-    </S.mainDiv>
+    <>
+      <S.mainDiv ref={outerDivRef}>
+        <div className="inner bg-yellow">1</div>
+        <div className="inner bg-blue">2</div>
+        <div className="inner bg-pink">3</div>
+      </S.mainDiv>
+    </>
   );
 }
 {
