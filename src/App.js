@@ -29,8 +29,22 @@ function App() {
             left: 0,
             behavior: "smooth",
           });
-        } else {
+        }else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
           console.log("현재 3페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+        }else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
+          console.log("현재 4페이지, down");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+        } else {
+          console.log("현재 5페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
