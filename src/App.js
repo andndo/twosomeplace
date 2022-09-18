@@ -76,7 +76,6 @@ function App() {
         <div className="inner bg-pink">3</div>
         <div className="inner bg-yellow">4</div>
         <div className="inner bg-blue">5</div>
-        
         <div className="inner bg-pink">6</div>
       </S.mainDiv>
     </>
