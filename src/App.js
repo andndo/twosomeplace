@@ -124,7 +124,7 @@ function App() {
   }, []);
   return (
     <>
-      <div class="progress-div">
+      <div className="progress-div">
         {pagenum}
         <progress value={number} max="60" class="bar"></progress>
         06
@@ -139,7 +139,17 @@ function App() {
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"
         />
-        <div className="inner bg-yellow">MENU STORY</div>
+        <div className="inner bg-yellow">
+          <div className="A-list">
+            <h1>에이리스트</h1>
+            <h2>
+              TWOSOME
+              <br />
+              IN YOUR MUG, A LIST
+            </h2>
+            <h3>언제 어디서나 여유롭게 즐기는 에이리스트</h3>
+          </div>
+        </div>
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
         <S.endInner>hello</S.endInner>
