@@ -2,10 +2,11 @@ import React from "react";
 //import Earth from "./components/earth";
 import * as S from "./style";
 import "./App.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 function App() {
-  let count = "01";
+  const [number, setNumber] = useState(10);
+  const [pagenum, setPagenum] = useState("");
   const outerDivRef = useRef();
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -14,8 +15,6 @@ function App() {
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
       const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
 
-      console.log(scrollTop, pageHeight);
-
       if (deltaY > 0) {
         if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
           outerDivRef.current.scrollTo({
@@ -23,41 +22,47 @@ function App() {
             left: 0,
             behavior: "smooth",
           });
-          count = "02";
+          setPagenum("02");
+          setNumber(number + 10);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
             behavior: "smooth",
           });
-          count = "03";
+          setPagenum("03");
+          setNumber(number + 20);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
             left: 0,
             behavior: "smooth",
           });
-          count = "04";
+          setPagenum("04");
+          setNumber(number + 30);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
-          count = "05";
+          setPagenum("05");
+          setNumber(number + 40);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 5) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 5,
             left: 0,
             behavior: "smooth",
           });
-          count = "06";
+          setPagenum("06");
+          setNumber(number + 50);
         } else {
           outerDivRef.current.scrollTo({
-            top: pageHeight * 5 + pageHeight / 2,
+            top: pageHeight * 5 + pageHeight / 1.7,
             left: 0,
             behavior: "smooth",
           });
+          console.log(number);
         }
       } else {
         if (scrollTop >= 0 && scrollTop <= pageHeight) {
@@ -66,43 +71,48 @@ function App() {
             left: 0,
             behavior: "smooth",
           });
-          count = "01";
+          setPagenum("01");
+          setNumber(10);
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
           outerDivRef.current.scrollTo({
             top: pageHeight,
             left: 0,
             behavior: "smooth",
           });
-          count = "02";
+          setPagenum("02");
+          setNumber(20);
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 3) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
             behavior: "smooth",
           });
-          count = "03";
+          setPagenum("03");
+          setNumber(30);
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 4) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
             left: 0,
             behavior: "smooth",
           });
-          count = "04";
-        } 
-        else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 5) {
+          setPagenum("04");
+          setNumber(40);
+        } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 5) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
-          count = "04";
-        }else {
+          setPagenum("05");
+          setNumber(50);
+        } else {
           outerDivRef.current.scrollTo({
             top: pageHeight * 5,
             left: 0,
             behavior: "smooth",
           });
-          count = "05";
+          setPagenum("06");
+          setNumber(60);
         }
       }
     };
@@ -114,11 +124,11 @@ function App() {
   }, []);
   return (
     <>
-    <div class="progress-div">
-      {count}
-      <progress value="10" max="60" class="bar"></progress>
-      06
-    </div>
+      <div class="progress-div">
+        {pagenum}
+        <progress value={number} max="60" class="bar"></progress>
+        06
+      </div>
       <S.mainDiv ref={outerDivRef}>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"

@@ -19,6 +19,6 @@ export const mainDiv = styled.div`
 `;
 export const endInner = styled.div`
   width: 100%;
-  height: 400px;
+  height: 600px;
   background-color: #333333;
 `;
