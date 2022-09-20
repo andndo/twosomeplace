@@ -5,6 +5,7 @@ import "./App.css";
 import { useRef, useEffect } from "react";
 
 function App() {
+  let count = "01";
   const outerDivRef = useRef();
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -17,80 +18,91 @@ function App() {
 
       if (deltaY > 0) {
         if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
-          console.log("현재 1페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight,
             left: 0,
             behavior: "smooth",
           });
+          count = "02";
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
-          console.log("현재 2페이지, down");
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
             behavior: "smooth",
           });
-        }else if(scrollTop >= pageHeight && scrollTop < pageHeight * 3){
+          count = "03";
+        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
             left: 0,
             behavior: "smooth",
           });
-        }
-        else if(scrollTop >= pageHeight && scrollTop < pageHeight * 4){
+          count = "04";
+        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
-        }
-         else {
-          console.log("현재 4페이지, down");
+          count = "05";
+        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 5) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 5,
+            left: 0,
+            behavior: "smooth",
+          });
+          count = "06";
+        } else {
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 5 + pageHeight / 2 - pageHeight / 11,
             left: 0,
             behavior: "smooth",
           });
         }
       } else {
         if (scrollTop >= 0 && scrollTop <= pageHeight) {
-          console.log("현재 1페이지, up");
           outerDivRef.current.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth",
           });
+          count = "01";
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
-          console.log("현재 2페이지, up");
           outerDivRef.current.scrollTo({
             top: pageHeight,
             left: 0,
             behavior: "smooth",
           });
+          count = "02";
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 3) {
-          console.log("현재 3페이지, up");
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
             behavior: "smooth",
           });
-        }
-          else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 4) {
-            console.log("현재 3페이지, up");
-            outerDivRef.current.scrollTo({
-              top: pageHeight * 3,
-              left: 0,
-              behavior: "smooth",
-            });
-          } 
-          
-         else {
-          console.log("현재 4페이지, up");
+          count = "03";
+        } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 4) {
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 3,
+            left: 0,
+            behavior: "smooth",
+          });
+          count = "04";
+        } 
+        else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 5) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
+          count = "04";
+        }else {
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 5,
+            left: 0,
+            behavior: "smooth",
+          });
+          count = "05";
         }
       }
     };
@@ -103,12 +115,19 @@ function App() {
   return (
     <>
       <S.mainDiv ref={outerDivRef}>
-        <div className="inner bg-yellow">1</div>
-        <div className="inner bg-blue">2</div>
-        <div className="inner bg-pink">3</div>
+        <S.backImg
+          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
+          alt="배경1-2"
+        />
+        <S.backImg src="https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg" />
+        <S.backImg
+          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+          alt="배경1-2"
+        />
         <div className="inner bg-yellow">4</div>
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
+        <S.endInner>hello</S.endInner>
       </S.mainDiv>
     </>
   );

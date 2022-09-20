@@ -17,3 +17,8 @@ export const mainDiv = styled.div`
     display: none;
   }
 `;
+export const endInner = styled.div`
+  width: 100%;
+  height: 400px;
+  background-color: #333333;
+`;
