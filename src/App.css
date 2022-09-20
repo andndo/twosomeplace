@@ -22,3 +22,26 @@ body {
 .bg-pink {
   background-color: #f4cfdf;
 }
+.progress-div {
+  transform: rotate(90deg);
+  top: 430px;
+  right: 40px;
+  position: absolute;
+  z-index: 999;
+  .h3{
+    transform: rotate(270deg);
+  }  
+}
+
+.bar {
+  height: 4px;
+  width: 120px;
+
+  -webkit-appearance: none;
+}
+::-webkit-progress-bar {
+  background-color: rgb(234, 232, 229);
+}
+::-webkit-progress-value {
+  background-color: #000;
+}

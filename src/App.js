@@ -54,7 +54,7 @@ function App() {
           count = "06";
         } else {
           outerDivRef.current.scrollTo({
-            top: pageHeight * 5 + pageHeight / 2 - pageHeight / 11,
+            top: pageHeight * 5 + pageHeight / 2,
             left: 0,
             behavior: "smooth",
           });
@@ -114,6 +114,11 @@ function App() {
   }, []);
   return (
     <>
+    <div class="progress-div">
+      {count}
+      <progress value="10" max="60" class="bar"></progress>
+      06
+    </div>
       <S.mainDiv ref={outerDivRef}>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
