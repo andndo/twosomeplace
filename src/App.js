@@ -134,14 +134,11 @@ function App() {
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
           alt="배경1-2"
         />
-        <S.backImg src="https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg" />
-        <S.backImg
-          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
-          alt="배경1-2"
-        />
-        <div className="inner bg-yellow">
+        <S.A_list_img>
           <div className="A-list">
-            <h1>에이리스트<div className="red-point"></div></h1>
+            <h1>
+              에이리스트<div className="red-point"></div>
+            </h1>
             <h2>
               TWOSOME
               <br />
@@ -149,13 +146,21 @@ function App() {
             </h2>
             <h3>언제 어디서나 여유롭게 즐기는 에이리스트</h3>
             <p>
-              좋은 커피를 마셔야 비로소 하루가 시작되는 느낌이라면 하루에도 몇<br/>
-              번씩 그윽한 커피 향이 생각난다면 마음속 우선순위에 언제나 커피가<br/>
-              있는 당신이라면 잊지 말고 챙겨야 할 단 하나의 리스트, 투썸플레이스<br/>
+              좋은 커피를 마셔야 비로소 하루가 시작되는 느낌이라면 하루에도 몇
+              <br />
+              번씩 그윽한 커피 향이 생각난다면 마음속 우선순위에 언제나 커피가
+              <br />
+              있는 당신이라면 잊지 말고 챙겨야 할 단 하나의 리스트, 투썸플레이스
+              <br />
               에이리스트.
             </p>
           </div>
-        </div>
+        </S.A_list_img>
+        <S.backImg
+          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+          alt="배경1-2"
+        />
+        <div className="inner bg-yellow"></div>
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
         <S.endInner>hello</S.endInner>

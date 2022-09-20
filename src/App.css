@@ -17,13 +17,13 @@ body {
   width: 100%;
   text-align: left;
   position: relative;
-  margin: 0 auto;
+  margin-left: 140px;
   padding: 0 48px;
   max-width: 1312px;
 }
 .A-list > h1 {
   display: inline-block;
-  margin-top: 20vh;
+  margin-top: 25vh;
   opacity: 1;
   line-height: 1;
   color: #000;
