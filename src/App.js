@@ -13,8 +13,9 @@ function App() {
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
       const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
 
+      console.log(scrollTop, pageHeight);
+
       if (deltaY > 0) {
-        console.log(pageHeight);
         if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
           console.log("현재 1페이지, down");
           outerDivRef.current.scrollTo({
@@ -24,38 +25,29 @@ function App() {
           });
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           console.log("현재 2페이지, down");
-          console.log(scrollTop, pageHeight);//2341.25, 1171
-          console.log(scrollTop+1, pageHeight * 2);//2342.25, 2342
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
             behavior: "smooth",
           });
-        } else if (scrollTop+1 >= pageHeight * 2 && scrollTop < pageHeight * 2 + 1) {
-          console.log("현재 3페이지, down");
+        }else if(scrollTop >= pageHeight && scrollTop < pageHeight * 3){
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
             left: 0,
             behavior: "smooth",
           });
-        } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
-          console.log("현재 4페이지, down");
+        }
+        else if(scrollTop >= pageHeight && scrollTop < pageHeight * 4){
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
-         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 5) {
-            console.log("현재 4페이지, down");
-            outerDivRef.current.scrollTo({
-              top: pageHeight * 5,
-              left: 0,
-              behavior: "smooth",
-            });
-        } else {
-          console.log("현재 5페이지, down");
+        }
+         else {
+          console.log("현재 4페이지, down");
           outerDivRef.current.scrollTo({
-            top: pageHeight * 6,
+            top: pageHeight * 5,
             left: 0,
             behavior: "smooth",
           });
@@ -71,37 +63,31 @@ function App() {
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
           console.log("현재 2페이지, up");
           outerDivRef.current.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          });
-          
-        } 
-        else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
-          console.log("현재 2페이지, up");
-          outerDivRef.current.scrollTo({
             top: pageHeight,
             left: 0,
             behavior: "smooth",
           });
-        }else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
-          console.log("현재 2페이지, up");
-          outerDivRef.current.scrollTo({
-            top: pageHeight*2,
-            left: 0,
-            behavior: "smooth",
-          });
-        }else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
-          console.log("현재 2페이지, up");
-          outerDivRef.current.scrollTo({
-            top: pageHeight*3,
-            left: 0,
-            behavior: "smooth",
-          });
-        }else {
+        } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 3) {
           console.log("현재 3페이지, up");
           outerDivRef.current.scrollTo({
-            top: pageHeight*4,
+            top: pageHeight * 2,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
+          else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 4) {
+            console.log("현재 3페이지, up");
+            outerDivRef.current.scrollTo({
+              top: pageHeight * 3,
+              left: 0,
+              behavior: "smooth",
+            });
+          } 
+          
+         else {
+          console.log("현재 4페이지, up");
+          outerDivRef.current.scrollTo({
+            top: pageHeight * 4,
             left: 0,
             behavior: "smooth",
           });
@@ -128,7 +114,7 @@ function App() {
   );
 }
 //{
-  /* <S.backImg
+/* <S.backImg
 src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
 alt="배경1-2"
 />
