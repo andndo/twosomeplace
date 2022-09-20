@@ -6,7 +6,7 @@ import { useRef, useEffect, useState } from "react";
 
 function App() {
   const [number, setNumber] = useState(10);
-  const [pagenum, setPagenum] = useState("");
+  const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -139,7 +139,7 @@ function App() {
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"
         />
-        <div className="inner bg-yellow">4</div>
+        <div className="inner bg-yellow">MENU STORY</div>
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
         <S.endInner>hello</S.endInner>
