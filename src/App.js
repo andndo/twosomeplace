@@ -141,7 +141,7 @@ function App() {
         />
         <div className="inner bg-yellow">
           <div className="A-list">
-            <h1>에이리스트</h1>
+            <h1>에이리스트<div className="red-point"></div></h1>
             <h2>
               TWOSOME
               <br />
