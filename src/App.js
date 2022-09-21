@@ -7,8 +7,10 @@ import { useRef, useEffect, useState } from "react";
 function App() {
   const [number, setNumber] = useState(10);
   const [pagenumberX, setPageNumberX] = useState(1);
+  const [opacityNum, setOpacityNum] = useState(1);
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
+
   const pageWidth = window.innerWidth;
   useEffect(() => {
     const wheelHandler = (e) => {
@@ -26,6 +28,7 @@ function App() {
           });
           setPagenum("02");
           setNumber(20);
+          setOpacityNum(0);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
@@ -75,6 +78,7 @@ function App() {
           });
           setPagenum("01");
           setNumber(10);
+          setOpacityNum(1);
         } else if (scrollTop >= pageHeight && scrollTop <= pageHeight * 2) {
           outerDivRef.current.scrollTo({
             top: pageHeight,
@@ -125,8 +129,10 @@ function App() {
     };
   }, []);
   const onClick = () => {
-    setPageNumberX(pagenumberX === 1 ? 2 : 1)
+    setPageNumberX(pagenumberX === 1 ? 2 : 1);
+    console.log(opacityNum);
   };
+
   return (
     <>
       <div className="progress-div">
@@ -134,7 +140,10 @@ function App() {
         <progress value={number} max="60" class="bar"></progress>
         06
       </div>
-      <S.swiperDiv>
+      
+      <S.mainDiv ref={outerDivRef}>
+        <div>
+        <S.swiperDiv>
         <div className="controlImg">
           <S.rightBtn>
             <img
@@ -151,11 +160,11 @@ function App() {
           </S.rightBtn>
         </div>
       </S.swiperDiv>
-      <S.mainDiv ref={outerDivRef}>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
           alt="배경1-2"
         />
+        </div>
         <S.A_list_img>
           <div className="A-list">
             <h1>
@@ -182,7 +191,7 @@ function App() {
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"
         />
-        <div className="inner bg-yellow"></div>
+        <div className="inner bg-yellow">8</div>
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
         <S.endInner>hello</S.endInner>
