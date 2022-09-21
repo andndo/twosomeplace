@@ -6,8 +6,10 @@ import { useRef, useEffect, useState } from "react";
 
 function App() {
   const [number, setNumber] = useState(10);
+  const [pagenumberX, setPageNumberX] = useState(1);
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
+  const pageWidth = window.innerWidth;
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
@@ -23,7 +25,7 @@ function App() {
             behavior: "smooth",
           });
           setPagenum("02");
-          setNumber(number + 10);
+          setNumber(20);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
@@ -31,7 +33,7 @@ function App() {
             behavior: "smooth",
           });
           setPagenum("03");
-          setNumber(number + 20);
+          setNumber(30);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
@@ -39,7 +41,7 @@ function App() {
             behavior: "smooth",
           });
           setPagenum("04");
-          setNumber(number + 30);
+          setNumber(40);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
@@ -47,7 +49,7 @@ function App() {
             behavior: "smooth",
           });
           setPagenum("05");
-          setNumber(number + 40);
+          setNumber(50);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 5) {
           outerDivRef.current.scrollTo({
             top: pageHeight * 5,
@@ -55,7 +57,7 @@ function App() {
             behavior: "smooth",
           });
           setPagenum("06");
-          setNumber(number + 50);
+          setNumber(60);
         } else {
           outerDivRef.current.scrollTo({
             top: pageHeight * 5 + pageHeight / 1.7,
@@ -122,6 +124,9 @@ function App() {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
+  const onClick = () => {
+    setPageNumberX(pagenumberX === 1 ? 2 : 1)
+  };
   return (
     <>
       <div className="progress-div">
@@ -129,6 +134,23 @@ function App() {
         <progress value={number} max="60" class="bar"></progress>
         06
       </div>
+      <S.swiperDiv>
+        <div className="controlImg">
+          <S.rightBtn>
+            <img
+              src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+              alt=""
+            />
+          </S.rightBtn>
+          {pagenumberX}/2
+          <S.rightBtn onClick={onClick}>
+            <img
+              src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+              alt=""
+            />
+          </S.rightBtn>
+        </div>
+      </S.swiperDiv>
       <S.mainDiv ref={outerDivRef}>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
