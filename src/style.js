@@ -9,6 +9,7 @@ export const backImg = styled.img`
   align-items: center;
   margin: 0;
 `;
+
 export const A_list_img = styled.div`
   background-image: url("https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg");
   height: 100%;
@@ -59,6 +60,7 @@ export const firstMainImg = styled.div`
   width: 100%; */
   width: 100%;
   height: 100%;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;

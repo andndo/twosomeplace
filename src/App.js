@@ -10,17 +10,17 @@ function App() {
   const [opacityNum, setOpacityNum] = useState(1);
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
-
-  const pageWidth = window.innerWidth;
+  const imgRef = useRef();
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
       const { deltaY } = e;
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
       const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
-
+      console.log(scrollTop, pageHeight);
       if (deltaY > 0) {
         if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
+          console.log("1");
           outerDivRef.current.scrollTo({
             top: pageHeight,
             left: 0,
@@ -30,6 +30,7 @@ function App() {
           setNumber(20);
           setOpacityNum(0);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 2) {
+          console.log("2"); //2341.25 1171
           outerDivRef.current.scrollTo({
             top: pageHeight * 2,
             left: 0,
@@ -38,6 +39,7 @@ function App() {
           setPagenum("03");
           setNumber(30);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 3) {
+          console.log("3"); //2341.25 1171
           outerDivRef.current.scrollTo({
             top: pageHeight * 3,
             left: 0,
@@ -46,6 +48,7 @@ function App() {
           setPagenum("04");
           setNumber(40);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 4) {
+          console.log("4");
           outerDivRef.current.scrollTo({
             top: pageHeight * 4,
             left: 0,
@@ -54,6 +57,7 @@ function App() {
           setPagenum("05");
           setNumber(50);
         } else if (scrollTop >= pageHeight && scrollTop < pageHeight * 5) {
+          console.log("5");
           outerDivRef.current.scrollTo({
             top: pageHeight * 5,
             left: 0,
@@ -62,12 +66,12 @@ function App() {
           setPagenum("06");
           setNumber(60);
         } else {
+          console.log("6");
           outerDivRef.current.scrollTo({
             top: pageHeight * 5 + pageHeight / 1.7,
             left: 0,
             behavior: "smooth",
           });
-          console.log(number);
         }
       } else {
         if (scrollTop >= 0 && scrollTop <= pageHeight) {
@@ -128,11 +132,14 @@ function App() {
       outerDivRefCurrent.removeEventListener("wheel", wheelHandler);
     };
   }, []);
-  const onClick = () => {
+  const onClickLeft = () => {
+    setPageNumberX(pagenumberX === 2 ? 1 : 2);
+    console.log(opacityNum);
+  };
+  const onClickRight = () => {
     setPageNumberX(pagenumberX === 1 ? 2 : 1);
     console.log(opacityNum);
   };
-
   return (
     <>
       <div className="progress-div">
@@ -140,19 +147,16 @@ function App() {
         <progress value={number} max="60" class="bar"></progress>
         06
       </div>
-      
-      <S.mainDiv ref={outerDivRef}>
-        <div>
-        <S.swiperDiv>
+      <S.swiperDiv style={{ opacity: opacityNum }}>
         <div className="controlImg">
-          <S.rightBtn>
+          <S.rightBtn onClick={onClickLeft}>
             <img
               src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
               alt=""
             />
           </S.rightBtn>
           {pagenumberX}/2
-          <S.rightBtn onClick={onClick}>
+          <S.rightBtn onClick={onClickRight}>
             <img
               src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
               alt=""
@@ -160,11 +164,34 @@ function App() {
           </S.rightBtn>
         </div>
       </S.swiperDiv>
-        <S.backImg
-          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
-          alt="배경1-2"
-        />
-        </div>
+      <S.mainDiv ref={outerDivRef}>
+        <S.firstMainImg
+          // style={
+          //   pagenumberX === 2
+          //     ? { transform: "translate(-1920px ,0)" }
+          //     : { transform: "translate(0, 0)" }
+          // }
+          ref={imgRef}
+        >
+          <div></div>
+          <S.backImg
+            src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
+            style={
+              pagenumberX === 2
+                ? { transform: "translateX(-30%)" }
+                : { transform: "translate(0, 0)" }
+            }
+          />
+          <S.backImg
+            src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+            style={
+              pagenumberX === 1
+                ? { transform: "translate(-1920px ,0)" }
+                : { transform: "translate(0, 0)" }
+            }
+          />
+        </S.firstMainImg>
+
         <S.A_list_img>
           <div className="A-list">
             <h1>
@@ -191,7 +218,10 @@ function App() {
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"
         />
-        <div className="inner bg-yellow">8</div>
+        <S.backImg
+          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+          alt="배경1-2"
+        />
         <div className="inner bg-blue">5</div>
         <div className="inner bg-pink">6</div>
         <S.endInner>hello</S.endInner>
