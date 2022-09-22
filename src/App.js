@@ -186,7 +186,7 @@ function App() {
             src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
             style={
               pagenumberX === 1
-                ? { transform: "translate(-1920px ,0)" }
+                ? { transform: "translateX(30%)" }
                 : { transform: "translate(0, 0)" }
             }
           />
