@@ -18,8 +18,14 @@ export const header = styled.div`
   }
   li {
     list-style: none;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 25px 5px;
+    font-weight: 700;
+    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    color: #fff;
     img{
-      
+      margin-left: 200px;
     }
   }
   &:hover {
