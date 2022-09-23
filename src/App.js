@@ -198,8 +198,8 @@ function App() {
           <S.slideImg
             style={
               pagenumberX === 2
-                ? { transform: "translateX(-100%)", transition: ".9s all" }
-                : { transform: "translate(0, 0)", transition: ".9s all" }
+                ? { transform: "translateX(-100%)", transition: ".99s all" }
+                : { transform: "translate(0, 0)", transition: ".99s all" }
             }
           >
             <img
@@ -210,8 +210,8 @@ function App() {
           <S.slideImg
             style={
               pagenumberX === 1
-                ? { transform: "translateX(100%)", transition: ".9s all" }
-                : { transform: "translate(0, 0)", transition: ".9s all" }
+                ? { transform: "translateX(100%)", transition: ".99s all" }
+                : { transform: "translate(0, 0)", transition: ".99s all" }
             }
           >
             <img
