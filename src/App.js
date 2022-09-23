@@ -167,23 +167,30 @@ function App() {
       </S.swiperDiv>
       <S.mainDiv ref={outerDivRef}>
         <S.firstMainImg ref={imgRef}>
-          <S.backImg
-            src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
+          <S.slideImg
             style={
-              
               pagenumberX === 2
-                ? { transform: "translateX(-100%)", transition: ".4s all" }
-                : { transform: "translate(0, 0)", transition: ".4s all" }
+                ? { transform: "translateX(-100%)", transition: ".2s all" }
+                : { transform: "translate(0, 0)", transition: ".2s all" }
             }
-          />
-          <S.backImg2
-            src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+          >
+            <img
+              src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
+              alt=""
+            />
+          </S.slideImg>
+          <S.slideImg
             style={
               pagenumberX === 1
                 ? { transform: "translateX(100%)", transition: ".2s all" }
                 : { transform: "translate(0, 0)", transition: ".2s all" }
             }
-          />
+          >
+            <img
+              src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
+              alt=""
+            />
+          </S.slideImg>
         </S.firstMainImg>
 
         <S.A_list_img>

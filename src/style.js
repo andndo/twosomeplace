@@ -10,14 +10,17 @@ export const backImg = styled.img`
   margin: 0;
 `;
 
-export const backImg2 = styled.img`
+export const slideImg = styled.div`
   width: 1307px;
-  height: 100%;
+  height: 100vh;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  margin-left: -1000px;
+  position: absolute;
+  top: 0;
 `;
 
 export const A_list_img = styled.div`
