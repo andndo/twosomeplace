@@ -11,23 +11,29 @@ export const backImg = styled.img`
 `;
 
 export const slideImg = styled.div`
-  width: 1307px;
+  width: 100%;
   height: 100vh;
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
   }
   display: flex;
   position: absolute;
   top: 0;
+  z-index: 0;
 `;
 
 export const A_list_img = styled.div`
+  z-index: 1000;
+  
   background-image: url("https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg");
-  height: 100%;
+  background-position: 0 -140px;
+  object-fit: cover;
+  height: 100vh;
   width: 100%;
 `;
+
 export const mainDiv = styled.div`
   height: 100vh;
   overflow-y: auto;
@@ -73,6 +79,7 @@ export const firstMainImg = styled.div`
   width: 100%; */
   width: 100%;
   height: 100%;
+  position: relative;
   /* overflow: hidden; */
   img {
     width: 100%;

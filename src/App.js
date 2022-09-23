@@ -170,8 +170,8 @@ function App() {
           <S.slideImg
             style={
               pagenumberX === 2
-                ? { transform: "translateX(-100%)", transition: ".2s all" }
-                : { transform: "translate(0, 0)", transition: ".2s all" }
+                ? { transform: "translateX(-100%)", transition: ".9s all" }
+                : { transform: "translate(0, 0)", transition: ".9s all" }
             }
           >
             <img
@@ -182,8 +182,8 @@ function App() {
           <S.slideImg
             style={
               pagenumberX === 1
-                ? { transform: "translateX(100%)", transition: ".2s all" }
-                : { transform: "translate(0, 0)", transition: ".2s all" }
+                ? { transform: "translateX(100%)", transition: ".9s all" }
+                : { transform: "translate(0, 0)", transition: ".9s all" }
             }
           >
             <img
@@ -215,6 +215,7 @@ function App() {
             </p>
           </div>
         </S.A_list_img>
+
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"
