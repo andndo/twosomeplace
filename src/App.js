@@ -141,8 +141,24 @@ function App() {
     setPageNumberX(pagenumberX === 1 ? 2 : 1);
     console.log(opacityNum);
   };
+  const onClickUp = () => {
+    outerDivRef.current.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setNumber(10);
+  };
   return (
     <>
+      <S.btnContainer>
+        <S.buyingBtn>
+          <p>기업 단체 구매</p>
+          <div></div>
+        </S.buyingBtn>
+
+        {number > 10 ? <S.upBtn onClick={onClickUp}>1</S.upBtn> : <></>}
+      </S.btnContainer>
       <div className="progress-div">
         {pagenum}
         <progress value={number} max="60" class="bar"></progress>

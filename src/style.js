@@ -23,10 +23,67 @@ export const slideImg = styled.div`
   top: 0;
   z-index: 0;
 `;
+export const btnContainer = styled.div`
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1;
+`;
+export const upBtn = styled.button`
+  transition: 0.5s all;
+  height: 64px;
+  margin-top: 16px;
+  font-size: 26px;
+  float: right;
+  width: 64px;
+  margin-right: 4px;
+  border: none;
+  color: #fff;
+  background-color: rgba(120, 120, 120, 0.7);
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+`;
+export const buyingBtn = styled.button`
+  display: flex;
+  overflow: hidden;
+  float: right;
+  width: 191px;
+  height: 72px;
+  border-radius: 72px;
+  background-color: rgba(213, 0, 55, 0.9);
+  border: 0;
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-right: 12px;
+    white-space: nowrap;
+    color: #fff;
+  }
+  div {
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    background-size: 100% auto;
+    background-image: url("https://www.twosome.co.kr/resources/images/main/ico_floating.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 2px;
+  }
+`;
 export const A_list_img = styled.div`
   z-index: 1000;
-  
+
   background-image: url("https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg");
   background-position: 0 -140px;
   object-fit: cover;

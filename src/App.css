@@ -57,7 +57,9 @@ body {
   word-break: keep-all;
   word-wrap: break-word;
 }
-
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .red-point {
   position: absolute;
   margin-left: 500px;
