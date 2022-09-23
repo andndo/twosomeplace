@@ -3,6 +3,7 @@ import React from "react";
 import * as S from "./style";
 import "./App.css";
 import { useRef, useEffect, useState } from "react";
+import all from "gsap/all";
 
 function App() {
   const [number, setNumber] = useState(10);
@@ -165,29 +166,22 @@ function App() {
         </div>
       </S.swiperDiv>
       <S.mainDiv ref={outerDivRef}>
-        <S.firstMainImg
-          // style={
-          //   pagenumberX === 2
-          //     ? { transform: "translate(-1920px ,0)" }
-          //     : { transform: "translate(0, 0)" }
-          // }
-          ref={imgRef}
-        >
-          <div></div>
+        <S.firstMainImg ref={imgRef}>
           <S.backImg
             src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220407_xYuWGMXB"
             style={
+              
               pagenumberX === 2
-                ? { transform: "translateX(-30%)" }
-                : { transform: "translate(0, 0)" }
+                ? { transform: "translateX(-100%)", transition: ".4s all" }
+                : { transform: "translate(0, 0)", transition: ".4s all" }
             }
           />
-          <S.backImg
+          <S.backImg2
             src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
             style={
               pagenumberX === 1
-                ? { transform: "translateX(30%)" }
-                : { transform: "translate(0, 0)" }
+                ? { transform: "translateX(100%)", transition: ".2s all" }
+                : { transform: "translate(0, 0)", transition: ".2s all" }
             }
           />
         </S.firstMainImg>

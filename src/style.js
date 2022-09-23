@@ -1,13 +1,23 @@
 import styled from "styled-components";
 
 export const backImg = styled.img`
-  width: 100%;
+  width: 1307px;
   height: 100%;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   margin: 0;
+`;
+
+export const backImg2 = styled.img`
+  width: 1307px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1000px;
 `;
 
 export const A_list_img = styled.div`
