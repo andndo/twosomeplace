@@ -14,14 +14,14 @@ export const header = styled.div`
 
   ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   li {
     list-style: none;
     font-size: 18px;
     line-height: 20px;
     padding: 25px 5px;
-    font-weight: 700;
+    font-weight: 900;
     transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
     color: #fff;
     img{
