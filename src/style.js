@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+export const header = styled.div`
+  background: transparent;
+  transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    list-style: none;
+    img{
+      
+    }
+  }
+  &:hover {
+    height: 420px;
+    background-color: #fff;
+  }
+`;
 export const backImg = styled.img`
   width: 1307px;
   height: 100%;
