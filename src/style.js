@@ -15,19 +15,26 @@ export const header = styled.div`
   ul {
     display: flex;
     justify-content: space-around;
-  }
-  li {
-    list-style: none;
-    font-size: 18px;
-    line-height: 20px;
-    padding: 25px 5px;
-    font-weight: 900;
-    transition: all .3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
-    color: #fff;
-    img{
-      margin-left: 200px;
+    li {
+      list-style: none;
+      font-size: 18px;
+      line-height: 20px;
+      padding: 25px 5px;
+      font-weight: 900;
+      transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+      color: #fff;
+      &:hover{
+        color: black;
+      }
+      img {
+        margin-left: 200px;
+        &:hover {
+          background-image: url("https://www.twosome.co.kr/resources/images/common/logo_black.svg");
+        }
+      }
     }
   }
+
   &:hover {
     height: 420px;
     background-color: #fff;
