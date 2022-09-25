@@ -15,6 +15,9 @@ export const header = styled.div`
   ul {
     display: flex;
     justify-content: space-around;
+    &:hover {
+      color: black;
+    }
     li {
       list-style: none;
       font-size: 18px;
@@ -23,8 +26,7 @@ export const header = styled.div`
       font-weight: 900;
       transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
       color: #fff;
-      &:hover{
-        color: black;
+      &:hover {
       }
       img {
         margin-left: 200px;

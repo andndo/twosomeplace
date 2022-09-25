@@ -152,7 +152,7 @@ function App() {
   return (
     <>
       <S.header>
-        <ul>
+        <ul style={number > 10 ? { color: "black" } : { color: "#fff" }}>
           <img src="https://www.twosome.co.kr/resources/images/common/logo_white.svg" />
           <li>투썸플레이스 소개</li>
           <li>메뉴이야기</li>
@@ -160,7 +160,9 @@ function App() {
           <li>투썸플레이스 앱 & 멤버쉽</li>
           <li>가맹점 창업안내</li>
           <li>새소식 & 공지</li>
-          <li><img src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg" /></li>
+          <li>
+            <img src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg" />
+          </li>
         </ul>
       </S.header>
       <S.btnContainer>
