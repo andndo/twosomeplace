@@ -154,15 +154,33 @@ function App() {
   return (
     <>
       <S.header>
-        <ul style={number > 10 ? { color: "#000" } : { color: "#fff" }}>
+        <ul
+          style={
+            number > 10
+              ? { color: "#000", transition: ".9s all" }
+              : { color: "#fff" }
+          }
+        >
           <img
             src="https://www.twosome.co.kr/resources/images/common/logo_white.svg"
-            onmouseover="this.src='https://www.twosome.co.kr/resources/images/common/logo_black.svg'"
-            onmouseout="this.src='https://www.twosome.co.kr/resources/images/common/logo_white.svg'"
             className="twosomeWhite"
             alt=""
+            style={
+              number > 10
+                ? { opacity: 0, transition: ".9s all" }
+                : { opacity: 1 }
+            }
           />
-
+          <img
+            src="https://www.twosome.co.kr/resources/images/common/logo_black.svg"
+            className="twosomeBlack"
+            alt=""
+            style={
+              number > 10
+                ? { opacity: 1, transition: ".9s all" }
+                : { opacity: 0 }
+            }
+          />
           <li>투썸플레이스 소개</li>
           <li>메뉴이야기</li>
           <li>브랜드 지원</li>
@@ -170,7 +188,26 @@ function App() {
           <li>가맹점 창업안내</li>
           <li>새소식 & 공지</li>
           <li>
-            <img src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg" />
+            <img
+              src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg"
+              className="cubeWhie"
+              alt=""
+              style={
+                number > 10
+                  ? { opacity: 0, transition: ".9s all" }
+                  : { opacity: 1 }
+              }
+            />
+            <img
+              src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_black.svg"
+              className="cubeBlack"
+              alt=""
+              style={
+                number > 10
+                  ? { opacity: 1, transition: ".9s all" }
+                  : { opacity: 0 }
+              }
+            />
           </li>
         </ul>
       </S.header>

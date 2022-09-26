@@ -15,13 +15,25 @@ export const header = styled.div`
   ul {
     display: flex;
     justify-content: space-around;
-
+    .twosomeBlack {
+      position: absolute;
+      opacity: 0;
+      top: 40px;
+      left: 80px;
+    }
     li {
+      letter-spacing: -0.5px;
       list-style: none;
       font-size: 18px;
       line-height: 20px;
       padding: 25px 5px;
       font-weight: 900;
+      .cubeBlack {
+        position: absolute;
+        opacity: 0;
+        top: 40px;
+        right: 45px;
+      }
       transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
       img {
         margin-left: 200px;
@@ -33,8 +45,19 @@ export const header = styled.div`
     height: 420px;
     background-color: #fff;
     ul {
+      .twosomeBlack {
+        opacity: 1;
+      }
+      .twosomeWhite {
+        opacity: 0;
+      }
       li {
         color: #000;
+        .cubeBlack {
+          opacity: 1;
+        }.cubeWhie {
+          opacity: 0;
+        }
       }
     }
   }
