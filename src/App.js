@@ -18,7 +18,9 @@ function App() {
       const { deltaY } = e;
       const { scrollTop } = outerDivRef.current; // 스크롤 위쪽 끝부분 위치
       const pageHeight = window.innerHeight; // 화면 세로길이, 100vh와 같습니다.
-      console.log(scrollTop, pageHeight);
+      // console.log(scrollTop, pageHeight);
+      console.log(number);
+
       if (deltaY > 0) {
         if (scrollTop >= 0 && scrollTop + 1 < pageHeight) {
           console.log("1");
@@ -152,8 +154,15 @@ function App() {
   return (
     <>
       <S.header>
-        <ul style={number > 10 ? { color: "black" } : { color: "#fff" }}>
-          <img src="https://www.twosome.co.kr/resources/images/common/logo_white.svg" />
+        <ul style={number > 10 ? { color: "#000" } : { color: "#fff" }}>
+          <img
+            src="https://www.twosome.co.kr/resources/images/common/logo_white.svg"
+            onmouseover="this.src='https://www.twosome.co.kr/resources/images/common/logo_black.svg'"
+            onmouseout="this.src='https://www.twosome.co.kr/resources/images/common/logo_white.svg'"
+            className="twosomeWhite"
+            alt=""
+          />
+
           <li>투썸플레이스 소개</li>
           <li>메뉴이야기</li>
           <li>브랜드 지원</li>

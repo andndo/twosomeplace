@@ -15,9 +15,7 @@ export const header = styled.div`
   ul {
     display: flex;
     justify-content: space-around;
-    &:hover {
-      color: black;
-    }
+
     li {
       list-style: none;
       font-size: 18px;
@@ -25,14 +23,8 @@ export const header = styled.div`
       padding: 25px 5px;
       font-weight: 900;
       transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
-      color: #fff;
-      &:hover {
-      }
       img {
         margin-left: 200px;
-        &:hover {
-          background-image: url("https://www.twosome.co.kr/resources/images/common/logo_black.svg");
-        }
       }
     }
   }
@@ -40,6 +32,11 @@ export const header = styled.div`
   &:hover {
     height: 420px;
     background-color: #fff;
+    ul {
+      li {
+        color: #000;
+      }
+    }
   }
 `;
 export const backImg = styled.img`
