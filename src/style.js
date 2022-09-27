@@ -15,6 +15,7 @@ export const header = styled.div`
   ul {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
     .twosomeBlack {
       position: absolute;
       opacity: 0;
@@ -24,10 +25,17 @@ export const header = styled.div`
     li {
       letter-spacing: -0.5px;
       list-style: none;
-      font-size: 18px;
+      font-size: 17px;
       line-height: 20px;
-      padding: 25px 5px;
+      padding: 35px 0;
       font-weight: 900;
+      width: 210px;
+      .cubeWhie {
+        position: absolute;
+        opacity: 1;
+        top: 40px;
+        right: 45px;
+      }
       .cubeBlack {
         position: absolute;
         opacity: 0;
@@ -37,6 +45,28 @@ export const header = styled.div`
       transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
       img {
         margin-left: 200px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        li {
+          float: left;
+          padding: 0;
+          display: inline-block;
+          margin: 0;
+          font-size: 16px;
+          line-height: 1em;
+          ul {
+
+            li {
+              text-align: left;
+
+              color: rgb(186, 186, 186);
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
   }
@@ -53,9 +83,19 @@ export const header = styled.div`
       }
       li {
         color: #000;
+        ul {
+          li {
+            ul {
+              li {
+                color: rgb(186, 186, 186);
+              }
+            }
+          }
+        }
         .cubeBlack {
           opacity: 1;
-        }.cubeWhie {
+        }
+        .cubeWhie {
           opacity: 0;
         }
       }

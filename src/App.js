@@ -181,12 +181,78 @@ function App() {
                 : { opacity: 0 }
             }
           />
-          <li>투썸플레이스 소개</li>
-          <li>메뉴이야기</li>
-          <li>브랜드 지원</li>
-          <li>투썸플레이스 앱 & 멤버쉽</li>
-          <li>가맹점 창업안내</li>
-          <li>새소식 & 공지</li>
+          <li>
+            <a>투썸플레이스 소개</a>
+            <ul>
+              <li>
+                투썸플레이스
+                <ul>
+                  <li>비전체계</li>
+                  <li>연혁</li>
+                  <li>BI</li>
+                  <li>20주년 이야기</li>
+                  <li>Recruit</li>
+                </ul>
+              </li>
+              <li>
+                매장
+                <ul>
+                  <li>DT/DI</li>
+                </ul>
+              </li>
+              <li>브랜드 브로슈어</li>
+            </ul>
+          </li>
+
+          <li>
+            <a>메뉴이야기</a>
+            <ul>
+              <li>커피이야기</li>
+              <li>디저트이야기</li>
+              <li>델리이야기</li>
+            </ul>
+          </li>
+          <li>
+            <a>브랜드 지원</a>
+            <ul>
+              <li>어썸 페어링 플랜트</li>
+              <li>어썸 디저트 플랜트</li>
+              <li>C&D센터</li>
+              <li>SEP센터</li>
+            </ul>
+          </li>
+          <li>
+            <a>투썸플레이스 앱 & 멤버쉽</a>
+            <ul>
+              <li>투썸플레이스 앱 소개</li>
+              <li>
+                투썸플레이스 멤버쉽
+                <ul>
+                  <li>멤버쉽 소개</li>
+                  <li>등급 및 혜택</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a>가맹점 창업안내</a>
+            <ul>
+              <li>가맹점 개설 안내</li>
+              <li>창업설명회</li>
+              <li>온라인 창업상담신청</li>
+              <li>FAQ</li>
+              <li>가맹점 전용 금융상품</li>
+            </ul>
+          </li>
+          <li>
+            <a>새소식 & 공지</a>
+            <ul>
+              <li>공지사항</li>
+              <li>보도자료</li>
+            </ul>
+          </li>
+          <div>
+
           <li>
             <img
               src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg"
@@ -209,6 +275,7 @@ function App() {
               }
             />
           </li>
+          </div>
         </ul>
       </S.header>
       <S.btnContainer>
