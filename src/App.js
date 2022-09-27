@@ -359,10 +359,9 @@ function App() {
           </div>
         </S.A_list_img>
 
-        <S.backImg
-          src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
-          alt="배경1-2"
-        />
+        <S.franchisePage>
+          <h1>FRANCHISE</h1>
+        </S.franchisePage>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
           alt="배경1-2"

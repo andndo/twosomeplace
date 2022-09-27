@@ -58,7 +58,6 @@ export const header = styled.div`
           font-size: 16px;
           line-height: 1em;
           ul {
-
             li {
               text-align: left;
 
@@ -100,6 +99,33 @@ export const header = styled.div`
         }
       }
     }
+  }
+`;
+export const franchisePage = styled.div`
+  text-align: center;
+  h1 {
+    display: inline-block;
+    margin-top: 20vh;
+    opacity: 1;
+    line-height: 1;
+    color: #000;
+    font-family: "Mark Pro";
+    font-size: 96px;
+    font-weight: 800;
+  }
+  h3 {
+    display: block;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  p{
+    display: block;
+    margin-bottom: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
   }
 `;
 export const backImg = styled.img`
