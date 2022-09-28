@@ -101,8 +101,25 @@ export const header = styled.div`
     }
   }
 `;
+export const franchiseBtnContainer = styled.div`
+  button {
+    align-items: center;
+    margin-bottom: 10vh;
+    flex-wrap: wrap;
+    min-width: 240px;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+`;
+
 export const franchisePage = styled.div`
   text-align: center;
+  height: 100vh;
+  width: 100%;
+
   h1 {
     display: inline-block;
     margin-top: 20vh;
@@ -112,6 +129,7 @@ export const franchisePage = styled.div`
     font-family: "Mark Pro";
     font-size: 96px;
     font-weight: 800;
+    padding: 0;
   }
   h3 {
     display: block;
@@ -120,7 +138,7 @@ export const franchisePage = styled.div`
     font-weight: 700;
     color: #000;
   }
-  p{
+  p {
     display: block;
     margin-bottom: 48px;
     font-size: 18px;
@@ -137,7 +155,6 @@ export const backImg = styled.img`
   align-items: center;
   margin: 0;
 `;
-
 export const slideImg = styled.div`
   width: 100%;
   height: 100vh;

@@ -252,29 +252,28 @@ function App() {
             </ul>
           </li>
           <div>
-
-          <li>
-            <img
-              src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg"
-              className="cubeWhie"
-              alt=""
-              style={
-                number > 10
-                  ? { opacity: 0, transition: ".9s all" }
-                  : { opacity: 1 }
-              }
-            />
-            <img
-              src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_black.svg"
-              className="cubeBlack"
-              alt=""
-              style={
-                number > 10
-                  ? { opacity: 1, transition: ".9s all" }
-                  : { opacity: 0 }
-              }
-            />
-          </li>
+            <li>
+              <img
+                src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_white.svg"
+                className="cubeWhie"
+                alt=""
+                style={
+                  number > 10
+                    ? { opacity: 0, transition: ".9s all" }
+                    : { opacity: 1 }
+                }
+              />
+              <img
+                src="https://www.twosome.co.kr/resources/images/icon/ico_24_allmenu_black.svg"
+                className="cubeBlack"
+                alt=""
+                style={
+                  number > 10
+                    ? { opacity: 1, transition: ".9s all" }
+                    : { opacity: 0 }
+                }
+              />
+            </li>
           </div>
         </ul>
       </S.header>
@@ -360,7 +359,34 @@ function App() {
         </S.A_list_img>
 
         <S.franchisePage>
-          <h1>FRANCHISE</h1>
+          <h1>
+            FRANCHISE<div className="red-point"></div>
+          </h1>
+          <h3>
+            당신의 창업 성공 스토리,
+            <br /> 투썸플레이스가 함께합니다.
+          </h3>
+          <p>
+            향기로운 커피와 달콤한 디저트가 함께하는 프리미엄 디저트 <br />
+            카페 투썸플레이스. 투썸플레이스의 축적된 경험과 노하우를 <br />
+            바탕으로 여러분의 성공창업을 약속 드립니다.
+          </p>
+          <S.franchiseBtnContainer>
+            <button className="franchiseBtn1">
+              창업안내 바로가기
+              <img
+                src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                alt=""
+              />
+            </button>
+            <button className="franchiseBtn2">
+              가맹상담 신청
+              <img
+                src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                alt=""
+              />
+            </button>
+          </S.franchiseBtnContainer>
         </S.franchisePage>
         <S.backImg
           src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
