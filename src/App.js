@@ -372,6 +372,7 @@ function App() {
             바탕으로 여러분의 성공창업을 약속 드립니다.
           </p>
           <S.franchiseBtnContainer>
+            <span></span>
             <button className="franchiseBtn1">
               창업안내 바로가기
               <img
@@ -379,6 +380,9 @@ function App() {
                 alt=""
               />
             </button>
+            <div>ㅤㅤ</div>
+            <span> </span>
+   
             <button className="franchiseBtn2">
               가맹상담 신청
               <img

@@ -6,25 +6,25 @@ body {
   display: none;
 }
 
-
 .inner {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.franchiseBtn1:hover {
-  transform: translateX(-100%);
-  overflow: hidden;
 
-  color: #fff;
+.franchiseBtn1:hover {
+  /* transform: translateX(-100%); */
+  /* overflow: hidden; */
+
+  /* color: #fff;
   background-color: #000;
-  transition: all 0.9s;
+  transition: all 0.9s; */
 }
 .franchiseBtn2:hover {
-  color: #fff;
+  /* color: #fff;
   background-color: #000;
-  transition: all 0.9s;
+  transition: all 0.9s; */
 }
 
 .A-list {
