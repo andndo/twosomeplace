@@ -25,6 +25,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  /* transition: all 0.3s ease; */
   position: relative;
   background: #fff;
   color: #000;
@@ -34,7 +35,7 @@ body {
   filter: invert(100%);
 }
 
-.custom-btn:before {
+.custom-btn:after {
   position: absolute;
   content: "";
   width: 0;
@@ -52,7 +53,7 @@ body {
 .custom-btn:hover {
   color: #fff;
 }
-.custom-btn:hover:before {
+.custom-btn:hover:after {
   left: 0;
   width: 100%;
 }

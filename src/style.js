@@ -1,4 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+const scroll = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform:translateX(-1920px);
+  }
+`;
+const goright = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform:translateX(1920px);
+  }
+`;
 
 export const header = styled.div`
   background: transparent;
@@ -102,13 +118,20 @@ export const header = styled.div`
   }
 `;
 export const franchiseMainDiv = styled.div`
-padding-top: 90px;
+  padding-top: 90px;
+`;
+export const franchiseBackground = styled.div`
+  height: 100%;
+  position: absolute;
+  width: calc(1920px * 2);
+  animation: ${scroll} 40s linear infinite;
+  background-color: blue;
+  z-index: 999;
 `;
 export const franchiseBtnContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-
   div {
     button {
       margin-bottom: 10vh;
@@ -122,7 +145,7 @@ export const franchiseBtnContainer = styled.div`
       overflow: hidden;
     }
   }
- 
+
   span {
     /* z-index: 990; */
     background-color: #000;
@@ -135,8 +158,9 @@ export const franchiseBtnContainer = styled.div`
 
 export const franchisePage = styled.div`
   text-align: center;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  background-color: #fff;
   h1 {
     display: inline-block;
     margin-top: 20vh;
