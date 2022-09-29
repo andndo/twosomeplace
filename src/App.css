@@ -5,6 +5,12 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+.swipeBtn_1,
+.swipeBtn_2 {
+  background-color: red;
+  margin: 0;
+  /* overflow: hidden; */
+}
 
 .inner {
   height: 100vh;
@@ -12,21 +18,44 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.franchiseBtn1:hover {
-  /* transform: translateX(-100%); */
-  /* overflow: hidden; */
-
-  /* color: #fff;
-  background-color: #000;
-  transition: all 0.9s; */
+.custom-btn {
+  width: 240px;
+  height: 64px;
+  border: 2px solid #000;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  color: #000;
+  z-index: 1;
 }
-.franchiseBtn2:hover {
-  /* color: #fff;
-  background-color: #000;
-  transition: all 0.9s; */
+.arrow {
+  filter: invert(100%);
 }
 
+.custom-btn:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover .arrow {
+  filter: invert(0);
+}
+.custom-btn:hover {
+  color: #fff;
+}
+.custom-btn:hover:before {
+  left: 0;
+  width: 100%;
+}
 .A-list {
   font-family: "Noto Sans KR", sans-serif;
   display: inline-block;

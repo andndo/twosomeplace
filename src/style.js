@@ -101,21 +101,35 @@ export const header = styled.div`
     }
   }
 `;
+export const franchiseMainDiv = styled.div`
+padding-top: 90px;
+`;
 export const franchiseBtnContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
 
-  button {
-    margin-bottom: 10vh;
-    flex-wrap: wrap;
-    min-width: 240px;
+  div {
+    button {
+      margin-bottom: 10vh;
+      flex-wrap: wrap;
+      min-width: 240px;
+      height: 64px;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-weight: 600;
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
+ 
+  span {
+    /* z-index: 990; */
+    background-color: #000;
+    width: 240px;
     height: 64px;
-    padding-left: 24px;
-    padding-right: 24px;
-    font-weight: 600;
-    font-size: 16px;
-    overflow: hidden;
+    margin-left: 240px;
+    color: blue;
   }
 `;
 
@@ -123,15 +137,10 @@ export const franchisePage = styled.div`
   text-align: center;
   height: 100vh;
   width: 100%;
-  span {
-    z-index: 990;
-    background-color: #000;
-    width: 240px;
-    height: 64px;
-  }
   h1 {
     display: inline-block;
     margin-top: 20vh;
+    margin-bottom: 20px;
     opacity: 1;
     line-height: 1;
     color: #000;
