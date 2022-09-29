@@ -359,8 +359,7 @@ function App() {
         </S.A_list_img>
 
         <S.franchisePage>
-         <S.franchiseBackground></S.franchiseBackground>   
-        {/* <img
+         <S.franchiseBackground><img
         src="https://www.twosome.co.kr/resources/images/content/img_store_01@3x.png"
         alt=""
       />
@@ -379,7 +378,8 @@ function App() {
       <img
         src="https://www.twosome.co.kr/resources/images/content/img_store_05@3x.png"
         alt=""
-      /> */}
+      /></S.franchiseBackground>   
+        
           <S.franchiseMainDiv>
             <h1>
               FRANCHISE<div className="red-point"></div>

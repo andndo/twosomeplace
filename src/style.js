@@ -127,6 +127,10 @@ export const franchiseBackground = styled.div`
   animation: ${scroll} 40s linear infinite;
   background-color: blue;
   z-index: 999;
+  img{
+    width: 160px;
+    height: 160px;
+  }
 `;
 export const franchiseBtnContainer = styled.div`
   width: 100%;
