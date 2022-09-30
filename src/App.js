@@ -359,27 +359,34 @@ function App() {
         </S.A_list_img>
 
         <S.franchisePage>
-         <S.franchiseBackground><img
-        src="https://www.twosome.co.kr/resources/images/content/img_store_01@3x.png"
-        alt=""
-      />
-      <img
-        src="https://www.twosome.co.kr/resources/images/content/img_store_02@3x.png"
-        alt=""
-      />
-      <img
-        src="https://www.twosome.co.kr/resources/images/content/img_store_03@3x.png"
-        alt=""
-      />
-      <img
-        src="https://www.twosome.co.kr/resources/images/content/img_store_04@3x.png"
-        alt=""
-      />
-      <img
-        src="https://www.twosome.co.kr/resources/images/content/img_store_05@3x.png"
-        alt=""
-      /></S.franchiseBackground>   
-        
+          <S.franchiseBackground>
+            <img
+              src="https://www.twosome.co.kr/resources/images/content/img_store_01@3x.png"
+              alt=""
+              className="circleimg1"
+            />
+            <img
+              src="https://www.twosome.co.kr/resources/images/content/img_store_02@3x.png"
+              alt=""
+              className="circleimg2"
+            />
+            <img
+              src="https://www.twosome.co.kr/resources/images/content/img_store_03@3x.png"
+              alt=""
+              className="circleimg3"
+            />
+            <img
+              src="https://www.twosome.co.kr/resources/images/content/img_store_04@3x.png"
+              alt=""
+              className="circleimg4"
+            />
+            <img
+              src="https://www.twosome.co.kr/resources/images/content/img_store_05@3x.png"
+              alt=""
+              className="circleimg5"
+            />
+          </S.franchiseBackground>
+
           <S.franchiseMainDiv>
             <h1>
               FRANCHISE<div className="red-point"></div>

@@ -18,6 +18,9 @@ body {
   justify-content: center;
   align-items: center;
 }
+.circleimg1{
+  margin-bottom: 100px;
+}
 .custom-btn {
   width: 240px;
   height: 64px;

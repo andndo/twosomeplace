@@ -7,14 +7,6 @@ const scroll = keyframes`
     transform:translateX(-1920px);
   }
 `;
-const goright = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform:translateX(1920px);
-  }
-`;
 
 export const header = styled.div`
   background: transparent;
