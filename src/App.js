@@ -182,7 +182,7 @@ function App() {
             }
           />
           <li>
-            <div>투썸플레이스 소개</div>
+            <S.headerItemName>투썸플레이스 소개</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -211,7 +211,7 @@ function App() {
           </li>
 
           <li>
-            <div>메뉴이야기</div>
+            <S.headerItemName>메뉴이야기</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -230,7 +230,7 @@ function App() {
           </li>
 
           <li>
-            <div>브랜드 지원</div>
+            <S.headerItemName>브랜드 지원</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -251,7 +251,7 @@ function App() {
             </div>
           </li>
           <li>
-            <div>투썸플레이스 앱 & 멤버쉽</div>
+            <S.headerItemName>투썸플레이스 앱 & 멤버쉽</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -270,7 +270,7 @@ function App() {
             </div>
           </li>
           <li>
-            <div>가맹점 창업</div>
+            <S.headerItemName>가맹점 창업</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -294,7 +294,7 @@ function App() {
             </div>
           </li>
           <li>
-            <div>새소식 & 공지</div>
+            <S.headerItemName>새소식 & 공지</S.headerItemName>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">

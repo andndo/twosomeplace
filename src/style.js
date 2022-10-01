@@ -8,75 +8,102 @@ const scroll = keyframes`
   }
 `;
 export const headerItemName = styled.div`
-  
-`
+  display: flex;
+  width: 175px;
+  font-size: 15px;
+  text-align: center;
+  align-items: center;
+`; /*background: transparent;
+transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+position: absolute;
+width: 100%;
+top: 0;
+left: 0;
+text-align: center;
+height: 100px;
+overflow: hidden;
+z-index: 1;
+
+ul {
+  display: flex;
+
+  align-items: flex-start;
+  .twosomeBlack {
+    position: absolute;
+    opacity: 0;
+    top: 40px;
+    left: 80px;
+  }
+  li {
+    letter-spacing: -0.5px;
+    list-style: none;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 35px 0;
+    font-weight: 900;
+    width: 210px;
+    .cubeWhie {
+      position: absolute;
+      opacity: 1;
+      top: 40px;
+      right: 45px;
+    }
+    .cubeBlack {
+      position: absolute;
+      opacity: 0;
+      top: 40px;
+      right: 45px;
+    }
+    transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    img {
+      margin-left: 200px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      li {
+        float: left;
+        padding: 0;
+        display: inline-block;
+        margin: 0;
+        font-size: 16px;
+        line-height: 1em;
+        ul {
+          li {
+            text-align: left;
+
+            color: rgb(186, 186, 186);
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}*/
 export const header = styled.div`
   background: transparent;
   transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
   position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
   height: 100px;
   overflow: hidden;
   z-index: 1;
-
+  
   ul {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
     .twosomeBlack {
       position: absolute;
       opacity: 0;
       top: 40px;
       left: 80px;
     }
+  
     li {
-      letter-spacing: -0.5px;
+      padding: 0;
+      margin: 0;
       list-style: none;
-      font-size: 17px;
-      line-height: 20px;
-      padding: 35px 0;
-      font-weight: 900;
-      width: 210px;
-      .cubeWhie {
-        position: absolute;
-        opacity: 1;
-        top: 40px;
-        right: 45px;
-      }
-      .cubeBlack {
-        position: absolute;
-        opacity: 0;
-        top: 40px;
-        right: 45px;
-      }
-      transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
-      img {
-        margin-left: 200px;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        li {
-          float: left;
-          padding: 0;
-          display: inline-block;
-          margin: 0;
-          font-size: 16px;
-          line-height: 1em;
-          ul {
-            li {
-              text-align: left;
-
-              color: rgb(186, 186, 186);
-              font-size: 14px;
-            }
-          }
-        }
-      }
+      line-height: 80px;
     }
   }
 
@@ -121,7 +148,7 @@ export const franchiseBackground = styled.div`
   animation: ${scroll} 40s linear infinite;
   background-color: blue;
   z-index: 999;
-  img{
+  img {
     width: 160px;
     height: 160px;
   }
