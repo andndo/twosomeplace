@@ -7,7 +7,9 @@ const scroll = keyframes`
     transform:translateX(-1920px);
   }
 `;
-
+export const headerItemName = styled.div`
+  
+`
 export const header = styled.div`
   background: transparent;
   transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
