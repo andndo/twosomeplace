@@ -11,8 +11,9 @@ export const headerItemName = styled.div`
   display: flex;
   width: 175px;
   font-size: 15px;
-  text-align: center;
-  align-items: center;
+  Position: absolute;
+
+Margin: 0 auto;
 `; /*background: transparent;
 transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 position: absolute;
