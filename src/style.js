@@ -261,27 +261,27 @@ export const upBtn = styled.button`
   transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 `;
 export const buyingBtn = styled.button`
-  display: flex;
-  overflow: hidden;
-  float: right;
-  width: 191px;
-  height: 72px;
-  border-radius: 72px;
-  background-color: rgba(213, 0, 55, 0.9);
-  border: 0;
-  outline: 0;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+    display: flex;
+    overflow: hidden;
+    float: right;
+    width: 191px;
+    height: 72px;
+    border-radius: 72px;
+    background-color: rgba(213, 0, 55, 0.9);
+    border: 0;
+    outline: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 
-  p {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.1;
-    margin-right: 12px;
-    white-space: nowrap;
-    color: #fff;
-  }
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-right: 12px;
+      white-space: nowrap;
+      color: #fff;
+    }
   div {
     display: inline-block;
     width: 37px;
