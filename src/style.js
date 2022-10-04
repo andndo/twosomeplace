@@ -11,9 +11,9 @@ export const headerItemName = styled.div`
   display: flex;
   width: 175px;
   font-size: 15px;
-  Position: absolute;
+  position: absolute;
 
-Margin: 0 auto;
+  margin: 0 auto;
 `; /*background: transparent;
 transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 position: absolute;
@@ -90,7 +90,7 @@ export const header = styled.div`
   height: 100px;
   overflow: hidden;
   z-index: 1;
-  
+
   ul {
     display: flex;
     .twosomeBlack {
@@ -99,7 +99,7 @@ export const header = styled.div`
       top: 40px;
       left: 80px;
     }
-  
+
     li {
       padding: 0;
       margin: 0;
@@ -143,8 +143,8 @@ export const franchiseMainDiv = styled.div`
   padding-top: 90px;
 `;
 export const franchiseBackground = styled.div`
-  height: 100%;
   position: absolute;
+  height: 100%;
   width: calc(1920px * 2);
   animation: ${scroll} 40s linear infinite;
   background-color: blue;
@@ -152,6 +152,79 @@ export const franchiseBackground = styled.div`
   img {
     width: 160px;
     height: 160px;
+  }
+  .circleimg1 {
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 2834px;
+  }
+  .circleimg2 {
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 3234px;
+  }
+  .circleimg3 {
+    position: absolute;
+    margin-top: 200px;
+
+    margin-left: 3534px;
+  }
+  .circleimg4 {
+    position: absolute;
+    margin-left: 3834px;
+    margin-top: 650px;
+  }
+  .circleimg5 {
+    position: absolute;
+    margin-left: 4234px;
+    margin-top: 250px;
+  }
+`;
+export const newsPage = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+`;
+export const newsMainDiv = styled.div`
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 48px;
+  max-width: 1312px;
+  a {
+    display: inline-block;
+    height: 34px;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+      color: #d50037;
+      text-underline-position: under;
+    }
+  }
+
+`;
+export const aContainer = styled.div`
+  margin: 48px -20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
+export const newsH1 = styled.div`
+  margin-top: 56px;
+  h1 {
+    display: inline-block;
+    opacity: 1;
+    line-height: 1;
+    color: #000;
+    font-family: "Mark Pro";
+    font-size: 96px;
+    font-weight: 800;
   }
 `;
 export const franchiseBtnContainer = styled.div`
@@ -261,27 +334,27 @@ export const upBtn = styled.button`
   transition: all 0.3s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 `;
 export const buyingBtn = styled.button`
-    display: flex;
-    overflow: hidden;
-    float: right;
-    width: 191px;
-    height: 72px;
-    border-radius: 72px;
-    background-color: rgba(213, 0, 55, 0.9);
-    border: 0;
-    outline: 0;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
+  display: flex;
+  overflow: hidden;
+  float: right;
+  width: 191px;
+  height: 72px;
+  border-radius: 72px;
+  background-color: rgba(213, 0, 55, 0.9);
+  border: 0;
+  outline: 0;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.16, 0.04, 0.03, 0.95);
 
-    p {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 1.1;
-      margin-right: 12px;
-      white-space: nowrap;
-      color: #fff;
-    }
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-right: 12px;
+    white-space: nowrap;
+    color: #fff;
+  }
   div {
     display: inline-block;
     width: 37px;

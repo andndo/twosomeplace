@@ -5,6 +5,7 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
 .swipeBtn_1,
 .swipeBtn_2 {
   background-color: red;
@@ -18,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.circleimg1{
+.circleimg1 {
   margin-bottom: 100px;
 }
 .custom-btn {

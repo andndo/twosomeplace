@@ -12,6 +12,8 @@ function App() {
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
   const imgRef = useRef();
+  const [bodo, setBodo] = useState(true)
+  const [gongy, setGongy] = useState(false)
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
@@ -151,6 +153,14 @@ function App() {
     });
     setNumber(10);
   };
+  const selectBodo = () =>{
+    document.getElementById('Bodo').style.textDecoration = 'underline'
+    document.getElementById('Bodo').style.color = 'red'
+  }
+  const selectGongy = () =>{
+    document.getElementById('Bodo').style.textDecoration = 'underline'
+    document.getElementById('Bodo').style.color = 'red'
+  }
   return (
     <>
       <S.header>
@@ -182,7 +192,7 @@ function App() {
             }
           />
           <li>
-            <S.headerItemName>투썸플레이스 소개</S.headerItemName>
+            <>투썸플레이스 소개</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -211,7 +221,7 @@ function App() {
           </li>
 
           <li>
-            <S.headerItemName>메뉴이야기</S.headerItemName>
+            <>메뉴이야기</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -230,7 +240,7 @@ function App() {
           </li>
 
           <li>
-            <S.headerItemName>브랜드 지원</S.headerItemName>
+            <>브랜드 지원</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -251,7 +261,7 @@ function App() {
             </div>
           </li>
           <li>
-            <S.headerItemName>투썸플레이스 앱 & 멤버쉽</S.headerItemName>
+            <>투썸플레이스 앱 & 멤버쉽</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -270,7 +280,7 @@ function App() {
             </div>
           </li>
           <li>
-            <S.headerItemName>가맹점 창업</S.headerItemName>
+            <>가맹점 창업</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -294,7 +304,7 @@ function App() {
             </div>
           </li>
           <li>
-            <S.headerItemName>새소식 & 공지</S.headerItemName>
+            <>새소식 & 공지</>
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
@@ -392,7 +402,6 @@ function App() {
             />
           </S.slideImg>
         </S.firstMainImg>
-
         <S.A_list_img>
           <div className="A-list">
             <h1>
@@ -415,7 +424,6 @@ function App() {
             </p>
           </div>
         </S.A_list_img>
-
         <S.franchisePage>
           <S.franchiseBackground>
             <img
@@ -483,7 +491,22 @@ function App() {
         </S.franchisePage>
         <div className="inner bg-pink">6</div>
         <div className="inner bg-blue">5</div>
-        <div className="inner bg-pink">6</div>
+        <S.newsPage>
+          <S.newsMainDiv>
+            <S.newsH1>
+              <h1>
+                NEWS
+                <br />
+                &NOTICE
+              </h1>
+            </S.newsH1>
+            <S.aContainer>
+              <a href="#">보도자료</a>
+              <a href="#">공지사항</a>
+              
+            </S.aContainer>
+          </S.newsMainDiv>
+        </S.newsPage>
         <S.endInner>hello</S.endInner>
       </S.mainDiv>
     </>
