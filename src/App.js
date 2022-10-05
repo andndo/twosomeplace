@@ -12,8 +12,8 @@ function App() {
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
   const imgRef = useRef();
-  const [bodo, setBodo] = useState(true)
-  const [gongy, setGongy] = useState(false)
+  const [bodo, setBodo] = useState(true);
+  const [gongy, setGongy] = useState(false);
   useEffect(() => {
     const wheelHandler = (e) => {
       e.preventDefault();
@@ -153,14 +153,22 @@ function App() {
     });
     setNumber(10);
   };
-  const selectBodo = () =>{
-    document.getElementById('Bodo').style.textDecoration = 'underline'
-    document.getElementById('Bodo').style.color = 'red'
-  }
-  const selectGongy = () =>{
-    document.getElementById('Bodo').style.textDecoration = 'underline'
-    document.getElementById('Bodo').style.color = 'red'
-  }
+  const selectBodo = () => {
+    document.getElementById("Bodo").style.textDecoration = "underline";
+    document.getElementById("Bodo").style.color = "red";
+  };
+  const selectGongy = () => {
+    document.getElementById("Gongy").style.textDecoration = "underline";
+    document.getElementById("Gongy").style.color = "red";
+  };
+  const notBodo = () => {
+    document.getElementById("Bodo").style.textDecoration = "none";
+    document.getElementById("Bodo").style.color = "black";
+  };
+  const notGongy = () => {
+    document.getElementById("Gongy").style.textDecoration = "none";
+    document.getElementById("Gongy").style.color = "black";
+  };
   return (
     <>
       <S.header>
@@ -501,14 +509,36 @@ function App() {
               </h1>
             </S.newsH1>
             <S.aContainer>
-              <a href="#">보도자료</a>
-              <a href="#">공지사항</a>
-              
+              <a
+                href="#"
+                id="Bodo"
+                onClick={() => {
+                  setBodo(true);
+                  setGongy(false);
+                }}
+                selectBodo={selectBodo}
+                notGongy={notGongy}
+              >
+                보도자료
+              </a>
+              <a
+                href="#"
+                id="Gongy"
+                onClick={() => {
+                  setBodo(false);
+                  setGongy(true);
+                }}
+                selectGongy={selectGongy}
+                notBodo={notBodo}
+              >
+                공지사항
+              </a>
             </S.aContainer>
           </S.newsMainDiv>
         </S.newsPage>
         <S.endInner>hello</S.endInner>
       </S.mainDiv>
+ 
     </>
   );
 }

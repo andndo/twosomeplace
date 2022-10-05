@@ -183,7 +183,7 @@ export const franchiseBackground = styled.div`
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
-  display: inline-block;
+  display: inline-block;l 
   width: 100%;
   text-align: left;
 `;
