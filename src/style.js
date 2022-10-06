@@ -183,8 +183,7 @@ export const franchiseBackground = styled.div`
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
-  display: inline-block;l 
-  width: 100%;
+  display: inline-block;
   text-align: left;
 `;
 export const newsMainDiv = styled.div`
@@ -201,13 +200,12 @@ export const newsMainDiv = styled.div`
     font-weight: 600;
     color: #000;
     text-decoration: none;
-    &:hover{
+    &:hover {
       text-decoration: underline;
       color: #d50037;
       text-underline-position: under;
     }
   }
-
 `;
 export const aContainer = styled.div`
   margin: 48px -20px 80px;
