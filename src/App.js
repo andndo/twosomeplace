@@ -505,7 +505,7 @@ function App() {
               <h1>
                 NEWS
                 <br />
-                &NOTICE
+                &NOTICE<div className="red-point"></div>
               </h1>
             </S.newsH1>
             <S.aContainer>

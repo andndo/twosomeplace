@@ -223,6 +223,9 @@ export const newsH1 = styled.div`
     font-family: "Mark Pro";
     font-size: 96px;
     font-weight: 800;
+    .red-point {
+      margin-left: 442px;
+    }
   }
 `;
 export const franchiseBtnContainer = styled.div`
