@@ -534,11 +534,11 @@ function App() {
                 공지사항
               </a>
             </S.aContainer>
+            <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg"/>
           </S.newsMainDiv>
         </S.newsPage>
         <S.endInner>hello</S.endInner>
       </S.mainDiv>
- 
     </>
   );
 }

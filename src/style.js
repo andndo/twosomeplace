@@ -206,6 +206,12 @@ export const newsMainDiv = styled.div`
       text-underline-position: under;
     }
   }
+  img {
+    display: block;
+    width: 320px;
+    height: 203px;
+    margin-bottom: 10vh;
+  }
 `;
 export const aContainer = styled.div`
   margin: 48px -20px 80px;
