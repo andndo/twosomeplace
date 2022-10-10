@@ -536,6 +536,11 @@ function App() {
             </S.aContainer>
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg"/>
           </S.newsMainDiv>
+          <S.newsSubDiv>
+            <S.gongydiv>
+        
+            </S.gongydiv>
+          </S.newsSubDiv>
         </S.newsPage>
         <S.endInner>hello</S.endInner>
       </S.mainDiv>

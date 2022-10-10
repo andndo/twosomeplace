@@ -180,6 +180,11 @@ export const franchiseBackground = styled.div`
     margin-top: 250px;
   }
 `;
+export const newsSubDiv = styled.div``;
+export const gongydiv = styled.div`
+  height: 700px;
+  width: 400px;
+`;
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
