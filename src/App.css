@@ -116,6 +116,7 @@ button {
   width: 20px;
   height: 20px;
   background-color: #d50037;
+  z-index: 200;
 }
 .bg-yellow {
   background-color: #f7f6cf;
