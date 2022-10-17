@@ -551,7 +551,9 @@ function App() {
                 <a>사이버신문고</a>
               </li>
             </ul>
+            <hr/>
           </S.endContainer>
+        
         </S.endInner>
       </S.mainDiv>
     </>

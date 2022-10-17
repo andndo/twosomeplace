@@ -184,7 +184,7 @@ export const gongydiv = styled.div`
   position: absolute;
 
   background-color: red;
-  margin-bottom: 500px;
+  bottom: 0px;
 `;
 export const endContainer = styled.div`
   display: inline-block;
@@ -193,7 +193,7 @@ export const endContainer = styled.div`
   position: relative;
   margin: auto auto;
   text-align: left;
-  ul{
+  ul {
     display: block;
     width: 230px;
     list-style-type: disc;
@@ -202,13 +202,17 @@ export const endContainer = styled.div`
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
-    li{
+    li {
       list-style: none;
       color: #fff;
       font-size: 24px;
       font-weight: 700;
-      
     }
+  }
+  hr {
+    height: 1px;
+    background-color: #222;
+    border: 0;
   }
 `;
 export const newsPage = styled.div`
