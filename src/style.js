@@ -180,16 +180,43 @@ export const franchiseBackground = styled.div`
     margin-top: 250px;
   }
 `;
-export const newsSubDiv = styled.div``;
 export const gongydiv = styled.div`
-  height: 700px;
-  width: 400px;
+  position: absolute;
+
+  background-color: red;
+  margin-bottom: 500px;
+`;
+export const endContainer = styled.div`
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: auto auto;
+  text-align: left;
+  ul{
+    display: block;
+    width: 230px;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    li{
+      list-style: none;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      
+    }
+  }
 `;
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
   display: inline-block;
   text-align: left;
+  position: relative;
 `;
 export const newsMainDiv = styled.div`
   display: block;
@@ -401,6 +428,7 @@ export const endInner = styled.div`
   width: 100%;
   height: 600px;
   background-color: #333333;
+  align-items: center;
 `;
 export const swiperDiv = styled.div`
   display: flex;

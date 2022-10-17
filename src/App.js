@@ -534,15 +534,25 @@ function App() {
                 공지사항
               </a>
             </S.aContainer>
-            <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg"/>
+            <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
+            <S.gongydiv>jeifjif</S.gongydiv>
           </S.newsMainDiv>
-          <S.newsSubDiv>
-            <S.gongydiv>
-        
-            </S.gongydiv>
-          </S.newsSubDiv>
         </S.newsPage>
-        <S.endInner>hello</S.endInner>
+        <S.endInner>
+          <S.endContainer>
+            <ul>
+              <li>
+                <a>기업 및 단체구매안내</a>
+              </li>
+              <li>
+                <a>가맹상담신청</a>
+              </li>
+              <li>
+                <a>사이버신문고</a>
+              </li>
+            </ul>
+          </S.endContainer>
+        </S.endInner>
       </S.mainDiv>
     </>
   );
