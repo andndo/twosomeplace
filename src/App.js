@@ -410,6 +410,8 @@ function App() {
             />
           </S.slideImg>
         </S.firstMainImg>
+        <S.MenuStoryMain>6</S.MenuStoryMain>
+
         <S.A_list_img>
           <div className="A-list">
             <h1>
@@ -497,7 +499,6 @@ function App() {
             </S.franchiseBtnContainer>
           </S.franchiseMainDiv>
         </S.franchisePage>
-        <div className="inner bg-pink">6</div>
         <div className="inner bg-blue">5</div>
         <S.newsPage>
           <S.newsMainDiv>
@@ -542,18 +543,23 @@ function App() {
           <S.endContainer>
             <ul>
               <li>
-                <a>기업 및 단체구매안내</a>
+                <a href="https://www.twosome.co.kr/cp/bulkOrderinquiry.do">
+                  기업 및 단체구매안내
+                </a>
               </li>
               <li>
-                <a>가맹상담신청</a>
+                <a href="https://www.twosome.co.kr/so/storeStartupCounselApply.do">
+                  가맹상담신청
+                </a>
               </li>
               <li>
-                <a>사이버신문고</a>
+                <a href="https://www.twosome.co.kr/cp/cyberInformInfo.do">
+                  사이버신문고
+                </a>
               </li>
             </ul>
-            <hr/>
+            <hr />
           </S.endContainer>
-        
         </S.endInner>
       </S.mainDiv>
     </>

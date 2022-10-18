@@ -186,12 +186,15 @@ export const gongydiv = styled.div`
   background-color: red;
   bottom: 0px;
 `;
+export const 
 export const endContainer = styled.div`
   display: inline-block;
-  width: 600px;
-  height: 400px;
+  width: 1312px;
+  height: 430px;
   position: relative;
-  margin: auto auto;
+  background-color: red;
+  margin-top: 60px;
+  margin-left: 300px;
   text-align: left;
   ul {
     display: block;
@@ -207,13 +210,25 @@ export const endContainer = styled.div`
       color: #fff;
       font-size: 24px;
       font-weight: 700;
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
   hr {
     height: 1px;
-    background-color: #222;
+    background-color: #333333;
     border: 0;
   }
+`;
+export const MenuStoryMain = styled.div`
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
 `;
 export const newsPage = styled.div`
   width: 100%;
@@ -431,7 +446,7 @@ export const mainDiv = styled.div`
 export const endInner = styled.div`
   width: 100%;
   height: 600px;
-  background-color: #333333;
+  background-color: #222;
   align-items: center;
 `;
 export const swiperDiv = styled.div`
