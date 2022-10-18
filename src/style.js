@@ -183,10 +183,41 @@ export const franchiseBackground = styled.div`
 export const gongydiv = styled.div`
   position: absolute;
 
-  background-color: red;
   bottom: 0px;
 `;
-export const 
+export const endRightDiv = styled.div`
+  width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+  }
+`;
+export const endBottomDiv = styled.div`
+  background-color: blue;
+  ul {
+    width: 100%;
+    height: 27px;
+    padding: 0;
+
+    li {
+      display: inline;
+      a {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+`;
 export const endContainer = styled.div`
   display: inline-block;
   width: 1312px;
@@ -207,9 +238,10 @@ export const endContainer = styled.div`
     padding-inline-start: 40px;
     li {
       list-style: none;
+      line-height: 50px;
       color: #fff;
       font-size: 24px;
-      font-weight: 700;
+      font-weight: 900;
       a {
         text-decoration: none;
         color: #fff;

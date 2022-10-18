@@ -558,7 +558,39 @@ function App() {
                 </a>
               </li>
             </ul>
+            <S.endRightDiv>
+              <h3>Adress</h3>
+              <p>
+                서울특별시 중구 을지로 170, 8층(을지로4가,
+                을지트윈타워)투썸플레이스(주)
+              </p>
+              <h3>Costmor Center</h3>
+              <p>고객센터 : 1577-4410ㅤㅤㅤㅤ팩스 : 02-2058-6777</p>
+            </S.endRightDiv>
+            <br />
             <hr />
+            <S.endBottomDiv>
+              <ul>
+                <li>
+                  <a>이용약관</a>
+                </li>
+                <li>
+                  <a>개인정보처리방침</a>
+                </li>
+                <li>
+                  <a>위치기반서비스 이용약관</a>
+                </li>
+                <li>
+                  <a>이메일 무단수집거부</a>
+                </li>
+                <li>
+                  <a>법적고지</a>
+                </li>
+                <li>
+                  <a>사업자정보확인</a>
+                </li>
+              </ul>
+            </S.endBottomDiv>
           </S.endContainer>
         </S.endInner>
       </S.mainDiv>
