@@ -169,6 +169,13 @@ function App() {
     document.getElementById("Gongy").style.textDecoration = "none";
     document.getElementById("Gongy").style.color = "black";
   };
+  const coffeeSlides = [
+    "https://www.twosome.co.kr/resources/images/main/menu_coffee1.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_coffee2.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_coffee3.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
   return (
     <>
       <S.header>
@@ -366,23 +373,7 @@ function App() {
         <progress value={number} max="60" class="bar"></progress>
         06
       </div>
-      <S.swiperDiv style={{ opacity: opacityNum }}>
-        <div className="controlImg">
-          <S.rightBtn onClick={onClickLeft}>
-            <img
-              src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
-              alt=""
-            />
-          </S.rightBtn>
-          {pagenumberX}/2
-          <S.rightBtn onClick={onClickRight}>
-            <img
-              src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
-              alt=""
-            />
-          </S.rightBtn>
-        </div>
-      </S.swiperDiv>
+
       <S.mainDiv ref={outerDivRef}>
         <S.firstMainImg ref={imgRef}>
           <S.slideImg
@@ -409,8 +400,45 @@ function App() {
               alt=""
             />
           </S.slideImg>
+          <S.swiperDiv>
+            <div className="controlImg">
+              <S.rightBtn onClick={onClickLeft}>
+                <img
+                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                  alt=""
+                  className="directionKey"
+                />
+              </S.rightBtn>
+              {pagenumberX}/2
+              <S.rightBtn onClick={onClickRight}>
+                <img
+                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                  alt=""
+                  className="directionKey"
+                />
+              </S.rightBtn>
+            </div>
+          </S.swiperDiv>
         </S.firstMainImg>
-        <S.MenuStoryMain>6</S.MenuStoryMain>
+        <S.MenuStoryPage>
+          <S.MenuStoryMainDiv>
+            <h1>MENU STORY</h1><div className="red-point"></div>
+            <ul>
+              <li>
+                <p>전문가의 섬세함으로 완성한 최상의 커피</p>
+                <a>COFFEE STORY</a>
+              </li>
+              <li>
+                <p>다양한 프리미엄 케이크 & 디저트</p>
+                <a>DESSERT STORY</a>
+              </li>
+              <li>
+                <p>가볍게 즐기는 맛있는 식사, 델리</p>
+                <a>DELI STORY</a>
+              </li>
+            </ul>
+          </S.MenuStoryMainDiv>
+        </S.MenuStoryPage>
 
         <S.A_list_img>
           <div className="A-list">

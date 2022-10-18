@@ -204,12 +204,11 @@ export const endRightDiv = styled.div`
 export const endBottomDiv = styled.div`
   background-color: blue;
   ul {
+    display: inline-flex;
     width: 100%;
     height: 27px;
     padding: 0;
-
     li {
-      display: inline;
       a {
         font-size: 14px;
         font-weight: 600;
@@ -257,10 +256,26 @@ export const endContainer = styled.div`
     border: 0;
   }
 `;
-export const MenuStoryMain = styled.div`
+export const MenuStoryPage = styled.div`
   background-color: #fff;
   width: 100%;
+  display: flex;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
+`;
+export const MenuStoryMainDiv = styled.div`
+  width: 1312px;
+  height: 540.95px;
+  background-color: blue;
+  h1 {
+    margin-top: 20px;
+    margin-left: 50px;
+    line-height: 1;
+    color: #000;
+    font-size: 96px;
+    font-weight: 800;
+  }
 `;
 export const newsPage = styled.div`
   width: 100%;
@@ -501,7 +516,9 @@ export const swiperDiv = styled.div`
     display: inline-flex;
     justify-content: center;
   }
-  img {
+  .directionKey {
+    width: 24px;
+    height: 24px;
     &:hover {
       cursor: pointer;
     }
