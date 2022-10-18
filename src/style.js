@@ -276,6 +276,21 @@ export const MenuStoryMainDiv = styled.div`
     font-size: 96px;
     font-weight: 800;
   }
+  ul {
+    li {
+      list-style: none;
+      margin-bottom: 28px ;
+      p {
+ 
+        font-size: 16px;
+        color: #000;
+      }
+      a {
+        font-size: 32px;
+        font-weight: 900;
+      }
+    }
+  }
 `;
 export const newsPage = styled.div`
   width: 100%;

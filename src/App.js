@@ -437,6 +437,25 @@ function App() {
                 <a>DELI STORY</a>
               </li>
             </ul>
+            <S.swiperDiv>
+            <div className="controlImg">
+              <S.rightBtn onClick={onClickLeft}>
+                <img
+                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                  alt=""
+                  className="directionKey"
+                />
+              </S.rightBtn>
+              {pagenumberX}/2
+              <S.rightBtn onClick={onClickRight}>
+                <img
+                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                  alt=""
+                  className="directionKey"
+                />
+              </S.rightBtn>
+            </div>
+          </S.swiperDiv>
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
 
