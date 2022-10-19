@@ -422,7 +422,8 @@ function App() {
         </S.firstMainImg>
         <S.MenuStoryPage>
           <S.MenuStoryMainDiv>
-            <h1>MENU STORY</h1><div className="red-point"></div>
+            <h1>MENU STORY</h1>
+            <div className="red-point"></div>
             <ul>
               <li>
                 <p>전문가의 섬세함으로 완성한 최상의 커피</p>
@@ -437,7 +438,7 @@ function App() {
                 <a>DELI STORY</a>
               </li>
             </ul>
-            <S.swiperDiv>
+            {/* <S.swiperDiv>
             <div className="controlImg">
               <S.rightBtn onClick={onClickLeft}>
                 <img
@@ -455,7 +456,7 @@ function App() {
                 />
               </S.rightBtn>
             </div>
-          </S.swiperDiv>
+          </S.swiperDiv> */}
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
 
@@ -617,26 +618,30 @@ function App() {
             <br />
             <hr />
             <S.endBottomDiv>
-              <ul>
-                <li>
-                  <a>이용약관</a>
-                </li>
-                <li>
-                  <a>개인정보처리방침</a>
-                </li>
-                <li>
-                  <a>위치기반서비스 이용약관</a>
-                </li>
-                <li>
-                  <a>이메일 무단수집거부</a>
-                </li>
-                <li>
-                  <a>법적고지</a>
-                </li>
-                <li>
-                  <a>사업자정보확인</a>
-                </li>
-              </ul>
+              
+              <div>
+                <a>이용약관</a>
+              </div>
+              <div className="yellow">
+                <a>개인정보처리방침</a>
+              </div>
+              <div>
+                <a>위치기반서비스 이용약관</a>
+              </div>
+              <div>
+                <a>이메일 무단수집거부</a>
+              </div>
+              <div>
+                <a>법적고지</a>
+              </div>
+              <div>
+                <a>사업자정보확인</a>
+              </div>
+              <S.footerNav>
+                <p>
+                대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 : 404-86-01054
+                </p>
+              </S.footerNav>
             </S.endBottomDiv>
           </S.endContainer>
         </S.endInner>

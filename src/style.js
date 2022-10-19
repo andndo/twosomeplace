@@ -201,20 +201,31 @@ export const endRightDiv = styled.div`
     color: #777;
   }
 `;
+export const footerNav = styled.div`
+font-size: 14px;
+font-weight: 400;
+color: #777;
+`
 export const endBottomDiv = styled.div`
   background-color: blue;
-  ul {
-    display: inline-flex;
-    width: 100%;
-    height: 27px;
-    padding: 0;
-    li {
-      a {
-        font-size: 14px;
-        font-weight: 600;
-        color: #fff;
-      }
+  width: 100%;
+  display: inline-flex;
+  gap: 30px;
+  div {
+    margin-top: 20px;
+    margin-left: 43px;
+    color: #fff;
+    a {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
     }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .yellow {
+    color: #f5ce3e;
   }
 `;
 export const endContainer = styled.div`
@@ -279,9 +290,8 @@ export const MenuStoryMainDiv = styled.div`
   ul {
     li {
       list-style: none;
-      margin-bottom: 28px ;
+      margin-bottom: 28px;
       p {
- 
         font-size: 16px;
         color: #000;
       }
