@@ -202,18 +202,23 @@ export const endRightDiv = styled.div`
   }
 `;
 export const footerNav = styled.nav`
-font-size: 14px;
-font-weight: 400;
-color: #777;
-position: absolute;
-left: 40px;
-margin-top: 54px;
-`
-export const imgContainer=styled.nav`
-  
-`
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  position: absolute;
+  left: 40px;
+  margin-top: 54px;
+`;
+export const imgContainer = styled.nav`
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  img {
+    gap: 30px;
+  }
+`;
 export const endBottomDiv = styled.div`
-  background-color: blue;
   width: 100%;
   display: inline-flex;
   gap: 30px;
@@ -239,7 +244,6 @@ export const endContainer = styled.div`
   width: 1312px;
   height: 430px;
   position: relative;
-  background-color: red;
   margin-top: 60px;
   margin-left: 300px;
   text-align: left;
