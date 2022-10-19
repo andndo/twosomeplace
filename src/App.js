@@ -618,7 +618,6 @@ function App() {
             <br />
             <hr />
             <S.endBottomDiv>
-              
               <div>
                 <a>이용약관</a>
               </div>
@@ -639,9 +638,23 @@ function App() {
               </div>
               <S.footerNav>
                 <p>
-                대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 : 404-86-01054
+                  대표이사 : 이영상 | 개인정보보호책임자 : 장재호 |
+                  사업자등록번호 : 404-86-01054
+                </p>
+                <p>
+                  통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 :
+                  helpmaster@twosome.co.kr
+                </p>
+                <p>
+                  Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights
+                  Reserved.
                 </p>
               </S.footerNav>
+              <S.imgContainer>
+                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg" />
+                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg" />
+                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_youtube.svg" />
+              </S.imgContainer>
             </S.endBottomDiv>
           </S.endContainer>
         </S.endInner>

@@ -201,10 +201,16 @@ export const endRightDiv = styled.div`
     color: #777;
   }
 `;
-export const footerNav = styled.div`
+export const footerNav = styled.nav`
 font-size: 14px;
 font-weight: 400;
 color: #777;
+position: absolute;
+left: 40px;
+margin-top: 54px;
+`
+export const imgContainer=styled.nav`
+  
 `
 export const endBottomDiv = styled.div`
   background-color: blue;
