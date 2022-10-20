@@ -176,6 +176,31 @@ function App() {
     "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const endInnerImg = [
+    "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
+    "https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg",
+    "https://www.twosome.co.kr/resources/images/icon/ico_32_youtube.svg",
+  ];
+  const endInnerImgList = endInnerImg.map((list) => <img src={list} />);
+  const endInnerDivA = [
+    "이용약관",
+    "개인정보처리방침",
+    "위치기반서비스 이용약관",
+    "이메일 무단수집거부",
+    "법적고지",
+    "사업자정보확인",
+  ];
+  const endInnerDivAList = endInnerDivA.map((list, index) =>
+    index === 1 ? (
+      <div className="yellow">
+        <a>{list}</a>
+      </div>
+    ) : (
+      <div>
+        <a>{list}</a>
+      </div>
+    )
+  );
   return (
     <>
       <S.header>
@@ -584,7 +609,11 @@ function App() {
               </a>
             </S.aContainer>
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
-            <S.gongydiv>jeifjif</S.gongydiv>
+            <S.gongydiv>
+              <S.gongySubDiv>
+                <p>등록돤 게시글이 없습니다</p>
+              </S.gongySubDiv>
+            </S.gongydiv>
           </S.newsMainDiv>
         </S.newsPage>
         <S.endInner>
@@ -618,24 +647,7 @@ function App() {
             <br />
             <hr />
             <S.endBottomDiv>
-              <div>
-                <a>이용약관</a>
-              </div>
-              <div className="yellow">
-                <a>개인정보처리방침</a>
-              </div>
-              <div>
-                <a>위치기반서비스 이용약관</a>
-              </div>
-              <div>
-                <a>이메일 무단수집거부</a>
-              </div>
-              <div>
-                <a>법적고지</a>
-              </div>
-              <div>
-                <a>사업자정보확인</a>
-              </div>
+              {endInnerDivAList}
               <S.footerNav>
                 <p>
                   대표이사 : 이영상 | 개인정보보호책임자 : 장재호 |
@@ -650,11 +662,7 @@ function App() {
                   Reserved.
                 </p>
               </S.footerNav>
-              <S.imgContainer>
-                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg" />
-                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg" />
-                <img src="https://www.twosome.co.kr/resources/images/icon/ico_32_youtube.svg" />
-              </S.imgContainer>
+              <S.imgContainer>{endInnerImgList}</S.imgContainer>
             </S.endBottomDiv>
           </S.endContainer>
         </S.endInner>

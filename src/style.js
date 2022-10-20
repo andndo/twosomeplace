@@ -182,8 +182,31 @@ export const franchiseBackground = styled.div`
 `;
 export const gongydiv = styled.div`
   position: absolute;
-
-  bottom: 0px;
+  background-color: red;
+  width: 590.39px;
+  height: 706.69px;
+  top: 134px;
+  right: 85px;
+  overflow: hidden;
+`;
+export const gongySubDiv = styled.div`
+  height: 103px;
+  width: 100%;
+  background-color: blue;
+  p {
+    align-items: center;
+    display: block;
+    position: relative;
+    padding: 38px 40px;
+    color: #333333;
+  }
+  &:hover {
+    box-shadow: inset 706.69px 0 #000;
+    transition: all .3s;
+    p {
+      color: #fff;
+    }
+  }
 `;
 export const endRightDiv = styled.div`
   width: auto;
