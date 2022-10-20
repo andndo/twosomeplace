@@ -354,7 +354,6 @@ export const MenuStoryPage = styled.div`
 export const MenuStoryMainDiv = styled.div`
   width: 1312px;
   height: 540.95px;
-  background-color: blue;
   h1 {
     margin-top: 20px;
     margin-left: 50px;
@@ -376,6 +375,18 @@ export const MenuStoryMainDiv = styled.div`
         font-weight: 900;
       }
     }
+  }
+  img {
+    width: 176px;
+    height: 176px;
+    gap: 50px;
+  }
+`;
+export const MenuImgContainer = styled.div`
+ /* position: absolute;
+  */img {
+    width: 176px;
+    height: 176px;
   }
 `;
 export const newsPage = styled.div`

@@ -175,7 +175,14 @@ function App() {
     "https://www.twosome.co.kr/resources/images/main/menu_coffee3.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
   ];
+  const coffeeList = coffeeSlides.map((list, index) => <img src={list} />);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const coffeeName = [
+    "롱블랙",
+    "TWG 1837 블랙티",
+    "스트로베리 피치 프라페",
+    "스페니쉬 연유라떼",
+  ];
   const endInnerImg = [
     "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
     "https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg",
@@ -484,6 +491,7 @@ function App() {
                 <a>DELI STORY</a>
               </li>
             </ul>
+            <S.MenuImgContainer> {coffeeList}</S.MenuImgContainer>
             {/* <S.swiperDiv>
             <div className="controlImg">
               <S.rightBtn onClick={onClickLeft}>
