@@ -4,7 +4,7 @@ const scroll = keyframes`
     transform: translateX(0);
   }
   100% {
-    transform:translateX(-1920px);
+    transform:translateX(-5000px);
   }
 `;
 export const headerItemName = styled.div`
@@ -141,43 +141,85 @@ export const header = styled.div`
 `;
 export const franchiseMainDiv = styled.div`
   padding-top: 90px;
+  z-index: 99;
+`;
+export const franchiseBtnContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  div {
+    button {
+      margin-bottom: 10vh;
+      flex-wrap: wrap;
+      min-width: 240px;
+      height: 64px;
+      padding-left: 24px;
+      padding-right: 24px;
+      font-weight: 600;
+      font-size: 16px;
+      overflow: hidden;
+    }
+  }
+
+  span {
+    background-color: #000;
+    width: 240px;
+    height: 64px;
+    margin-left: 240px;
+    color: blue;
+  }
+`;
+
+export const franchisePage = styled.div`
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #fff; */
+  position: relative;
+  h1 {
+    z-index: 400;
+    display: inline-block;
+    margin-top: 20vh;
+    margin-bottom: 20px;
+    opacity: 1;
+    line-height: 1;
+    color: #000;
+    font-family: "Mark Pro";
+    font-size: 96px;
+    font-weight: 800;
+    padding: 0;
+  }
+  h3 {
+    z-index: 400;
+    display: block;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  p {
+    z-index: 400;
+    display: block;
+    margin-bottom: 48px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+  }
 `;
 export const franchiseBackground = styled.div`
   position: absolute;
   height: 100%;
+  z-index: -1;
   width: calc(1920px * 2);
-  animation: ${scroll} 40s linear infinite;
-  background-color: blue;
-  z-index: 999;
+  animation: ${scroll} 50s linear infinite;
+  /* background-color: blue; */
+  margin-left: 1000px;
+  display: inline-flex;
+  align-items: flex-start;
   img {
     width: 160px;
     height: 160px;
-  }
-  .circleimg1 {
-    position: absolute;
-    margin-top: 300px;
-    margin-left: 2834px;
-  }
-  .circleimg2 {
-    position: absolute;
-    margin-top: 700px;
-    margin-left: 3234px;
-  }
-  .circleimg3 {
-    position: absolute;
-    margin-top: 200px;
-
-    margin-left: 3534px;
-  }
-  .circleimg4 {
-    position: absolute;
-    margin-left: 3834px;
-    margin-top: 650px;
-  }
-  .circleimg5 {
-    position: absolute;
-    margin-left: 4234px;
-    margin-top: 250px;
+    margin-left: 300px;
   }
 `;
 export const gongydiv = styled.div`
@@ -189,9 +231,9 @@ export const gongydiv = styled.div`
   right: 85px;
   overflow: hidden;
 `;
-export const gongySubDiv = styled.div`
+export const bodoSubDiv = styled.div`
   height: 103px;
-  width: 100%;
+  width: 590.39px;
   background-color: blue;
   p {
     align-items: center;
@@ -202,12 +244,13 @@ export const gongySubDiv = styled.div`
   }
   &:hover {
     box-shadow: inset 706.69px 0 #000;
-    transition: all .3s;
+    transition: all 0.3s;
     p {
       color: #fff;
     }
   }
 `;
+export const gongySubDiv = styled.div``;
 export const endRightDiv = styled.div`
   width: auto;
   position: absolute;
@@ -388,66 +431,6 @@ export const newsH1 = styled.div`
     .red-point {
       margin-left: 442px;
     }
-  }
-`;
-export const franchiseBtnContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  div {
-    button {
-      margin-bottom: 10vh;
-      flex-wrap: wrap;
-      min-width: 240px;
-      height: 64px;
-      padding-left: 24px;
-      padding-right: 24px;
-      font-weight: 600;
-      font-size: 16px;
-      overflow: hidden;
-    }
-  }
-
-  span {
-    /* z-index: 990; */
-    background-color: #000;
-    width: 240px;
-    height: 64px;
-    margin-left: 240px;
-    color: blue;
-  }
-`;
-
-export const franchisePage = styled.div`
-  text-align: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  h1 {
-    display: inline-block;
-    margin-top: 20vh;
-    margin-bottom: 20px;
-    opacity: 1;
-    line-height: 1;
-    color: #000;
-    font-family: "Mark Pro";
-    font-size: 96px;
-    font-weight: 800;
-    padding: 0;
-  }
-  h3 {
-    display: block;
-    margin-bottom: 32px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-  }
-  p {
-    display: block;
-    margin-bottom: 48px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #333;
   }
 `;
 export const backImg = styled.img`

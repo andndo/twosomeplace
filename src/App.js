@@ -201,6 +201,27 @@ function App() {
       </div>
     )
   );
+  const franchiseImg = [
+    "https://www.twosome.co.kr/resources/images/content/img_store_01@3x.png",
+    "https://www.twosome.co.kr/resources/images/content/img_store_02@3x.png",
+    "https://www.twosome.co.kr/resources/images/content/img_store_03@3x.png",
+    "https://www.twosome.co.kr/resources/images/content/img_store_04@3x.png",
+    "https://www.twosome.co.kr/resources/images/content/img_store_05@3x.png",
+  ];
+  const franchiseImgList = franchiseImg.map((list, index) => (
+    <img
+      style={{
+        marginTop: `${
+          parseInt(`${index <= 2 ? 0 : 80}`) +
+          (index % 3) * 160 +
+          ((index % 3) + 1) * 130
+        }px`,
+      }}
+      src={list}
+      alt=""
+    />
+  ));
+
   return (
     <>
       <S.header>
@@ -508,33 +529,7 @@ function App() {
           </div>
         </S.A_list_img>
         <S.franchisePage>
-          <S.franchiseBackground>
-            <img
-              src="https://www.twosome.co.kr/resources/images/content/img_store_01@3x.png"
-              alt=""
-              className="circleimg1"
-            />
-            <img
-              src="https://www.twosome.co.kr/resources/images/content/img_store_02@3x.png"
-              alt=""
-              className="circleimg2"
-            />
-            <img
-              src="https://www.twosome.co.kr/resources/images/content/img_store_03@3x.png"
-              alt=""
-              className="circleimg3"
-            />
-            <img
-              src="https://www.twosome.co.kr/resources/images/content/img_store_04@3x.png"
-              alt=""
-              className="circleimg4"
-            />
-            <img
-              src="https://www.twosome.co.kr/resources/images/content/img_store_05@3x.png"
-              alt=""
-              className="circleimg5"
-            />
-          </S.franchiseBackground>
+          <S.franchiseBackground>{franchiseImgList}</S.franchiseBackground>
 
           <S.franchiseMainDiv>
             <h1>
@@ -610,9 +605,10 @@ function App() {
             </S.aContainer>
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
             <S.gongydiv>
-              <S.gongySubDiv>
+              <S.bodoSubDiv>
                 <p>등록돤 게시글이 없습니다</p>
-              </S.gongySubDiv>
+              </S.bodoSubDiv>
+              {/* <S. */}
             </S.gongydiv>
           </S.newsMainDiv>
         </S.newsPage>
