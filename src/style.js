@@ -354,6 +354,7 @@ export const MenuStoryPage = styled.div`
 export const MenuStoryMainDiv = styled.div`
   width: 1312px;
   height: 540.95px;
+  background-color: blue;
   h1 {
     margin-top: 20px;
     margin-left: 50px;
@@ -383,10 +384,46 @@ export const MenuStoryMainDiv = styled.div`
   }
 `;
 export const MenuImgContainer = styled.div`
- /* position: absolute;
-  */img {
-    width: 176px;
-    height: 176px;
+  position: absolute;
+  right: 70px;
+  top: 570px;
+  div {
+    display: inline-flex;
+    img {
+      margin-left: 50px;
+      width: 176px;
+      height: 176px;
+    }
+  }
+`;
+export const MenuStoryImgMain = styled.div`
+  position: relative;
+`;
+export const swiperDiv2 = styled.div`
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  width: 240px;
+  height: 56px;
+  right: 100px;
+  bottom: 172px;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, 0);
+  color: #fff;
+  div {
+    width: 240px;
+    display: inline-flex;
+    justify-content: center;
+  }
+  .directionKey {
+    width: 24px;
+    height: 24px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 export const newsPage = styled.div`

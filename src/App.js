@@ -175,7 +175,11 @@ function App() {
     "https://www.twosome.co.kr/resources/images/main/menu_coffee3.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
   ];
-  const coffeeList = coffeeSlides.map((list, index) => <img src={list} />);
+  const coffeeList = coffeeSlides.map((list, index) => (
+    <div>
+      <img src={list} />
+    </div>
+  ));
   const [currentIndex, setCurrentIndex] = useState(0);
   const coffeeName = [
     "롱블랙",
@@ -183,6 +187,7 @@ function App() {
     "스트로베리 피치 프라페",
     "스페니쉬 연유라떼",
   ];
+  const coffeeNameList = coffeeName.map((list)=>(<p>{list}</p>))
   const endInnerImg = [
     "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
     "https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg",
@@ -474,6 +479,28 @@ function App() {
           </S.swiperDiv>
         </S.firstMainImg>
         <S.MenuStoryPage>
+          <div>
+            <S.MenuImgContainer> {coffeeList}</S.MenuImgContainer>
+            <S.swiperDiv2>
+              <div className="controlImg">
+                <S.rightBtn onClick={onClickLeft}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                    alt=""
+                    className="directionKey"
+                  />
+                </S.rightBtn>
+                {coffeeNameList}
+                <S.rightBtn onClick={onClickRight}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                    alt=""
+                    className="directionKey"
+                  />
+                </S.rightBtn>
+              </div>
+            </S.swiperDiv2>
+          </div>
           <S.MenuStoryMainDiv>
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
@@ -491,26 +518,6 @@ function App() {
                 <a>DELI STORY</a>
               </li>
             </ul>
-            <S.MenuImgContainer> {coffeeList}</S.MenuImgContainer>
-            {/* <S.swiperDiv>
-            <div className="controlImg">
-              <S.rightBtn onClick={onClickLeft}>
-                <img
-                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
-                  alt=""
-                  className="directionKey"
-                />
-              </S.rightBtn>
-              {pagenumberX}/2
-              <S.rightBtn onClick={onClickRight}>
-                <img
-                  src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
-                  alt=""
-                  className="directionKey"
-                />
-              </S.rightBtn>
-            </div>
-          </S.swiperDiv> */}
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
 
