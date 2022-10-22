@@ -169,6 +169,7 @@ function App() {
     document.getElementById("Gongy").style.textDecoration = "none";
     document.getElementById("Gongy").style.color = "black";
   };
+
   const coffeeSlides = [
     "https://www.twosome.co.kr/resources/images/main/menu_coffee1.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee2.jpg",
@@ -181,13 +182,19 @@ function App() {
     </div>
   ));
   const [currentIndex, setCurrentIndex] = useState(0);
-  const coffeeName = [
+  const [coffeeName, setCoffeeName] = useState([
     "롱블랙",
     "TWG 1837 블랙티",
     "스트로베리 피치 프라페",
     "스페니쉬 연유라떼",
-  ];
-  const coffeeNameList = coffeeName.map((list)=>(<p>{list}</p>))
+  ]);
+  // console.log(coffeeName.push(coffeeName.shift()));
+  // coffeeName.unshift(coffeeName.pop());
+  const a = 1;
+  const coffeeNameList = coffeeName.map((list, index, current) => (
+    <div>{index === 0 ? list : ""}</div>
+  ));
+  const onClickMenuRight = () => {};
   const endInnerImg = [
     "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
     "https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg",
@@ -479,8 +486,10 @@ function App() {
           </S.swiperDiv>
         </S.firstMainImg>
         <S.MenuStoryPage>
-          <div>
-            <S.MenuImgContainer> {coffeeList}</S.MenuImgContainer>
+          <S.MenuContainer>
+            <S.MenuImgContainer>
+              <div>{coffeeList}</div>
+            </S.MenuImgContainer>
             <S.swiperDiv2>
               <div className="controlImg">
                 <S.rightBtn onClick={onClickLeft}>
@@ -490,7 +499,9 @@ function App() {
                     className="directionKey"
                   />
                 </S.rightBtn>
-                {coffeeNameList}
+                <S.coffeeNameBox>
+                  <div>{coffeeNameList}</div>
+                </S.coffeeNameBox>
                 <S.rightBtn onClick={onClickRight}>
                   <img
                     src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
@@ -500,7 +511,7 @@ function App() {
                 </S.rightBtn>
               </div>
             </S.swiperDiv2>
-          </div>
+          </S.MenuContainer>
           <S.MenuStoryMainDiv>
             <h1>MENU STORY</h1>
             <div className="red-point"></div>

@@ -350,11 +350,14 @@ export const MenuStoryPage = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow-x: hidden;
 `;
 export const MenuStoryMainDiv = styled.div`
   width: 1312px;
   height: 540.95px;
   background-color: blue;
+
   h1 {
     margin-top: 20px;
     margin-left: 50px;
@@ -383,12 +386,21 @@ export const MenuStoryMainDiv = styled.div`
     gap: 50px;
   }
 `;
+
+export const MenuContainer = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+`;
+
 export const MenuImgContainer = styled.div`
   position: absolute;
   right: 70px;
   top: 570px;
-  div {
+  > div {
     display: inline-flex;
+  }
+  div > div {
     img {
       margin-left: 50px;
       width: 176px;
@@ -403,7 +415,9 @@ export const swiperDiv2 = styled.div`
   display: flex;
   position: absolute;
   z-index: 999;
-  left: 50%;
+  /* left: 50%; */
+  left: -960px;
+  top: 720px;
   width: 240px;
   height: 56px;
   right: 100px;
@@ -424,6 +438,23 @@ export const swiperDiv2 = styled.div`
     &:hover {
       cursor: pointer;
     }
+  }
+  div {
+  margin: 0;
+  padding: 0;
+    p {
+      display: flex;
+    }
+  }
+`;
+export const coffeeNameBox = styled.div`
+  width: 50px;
+  height: 25px;
+  background-color: blue;
+  /* overflow: hidden; */
+  margin-left: 90px;
+  div{
+    text-align: center;
   }
 `;
 export const newsPage = styled.div`
