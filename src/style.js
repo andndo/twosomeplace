@@ -232,21 +232,25 @@ export const gongydiv = styled.div`
   overflow: hidden;
 `;
 export const bodoSubDiv = styled.div`
-  height: 103px;
+  height: 100%;
   width: 590.39px;
   background-color: blue;
-  p {
-    align-items: center;
-    display: block;
-    position: relative;
-    padding: 38px 40px;
-    color: #333333;
-  }
-  &:hover {
-    box-shadow: inset 706.69px 0 #000;
-    transition: all 0.3s;
+  nav {
+    width: 100%;
+    height: 181px;
     p {
-      color: #fff;
+      align-items: center;
+      display: block;
+      position: relative;
+      padding: 38px 40px;
+      color: #333333;
+    }
+    &:hover {
+      box-shadow: inset 706.69px 0 #000;
+      transition: all 0.3s;
+      p {
+        color: #fff;
+      }
     }
   }
 `;
@@ -356,7 +360,6 @@ export const MenuStoryPage = styled.div`
 export const MenuStoryMainDiv = styled.div`
   width: 1312px;
   height: 540.95px;
-  background-color: blue;
 
   h1 {
     margin-top: 20px;
@@ -440,8 +443,8 @@ export const swiperDiv2 = styled.div`
     }
   }
   div {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
     p {
       display: flex;
     }
@@ -453,7 +456,7 @@ export const coffeeNameBox = styled.div`
   background-color: blue;
   /* overflow: hidden; */
   margin-left: 90px;
-  div{
+  div {
     text-align: center;
   }
 `;
@@ -476,8 +479,8 @@ export const newsMainDiv = styled.div`
     margin: 0 20px;
     font-size: 20px;
     font-weight: 600;
-    color: #000;
     text-decoration: none;
+    color: #000;
     &:hover {
       text-decoration: underline;
       color: #d50037;

@@ -240,7 +240,12 @@ function App() {
       alt=""
     />
   ));
-
+  const footerNavContent = [
+    " 대표이사 : 이영상 | 개인정보보호책임자 : 장재호 | 사업자등록번호 : 404-86-01054",
+    "통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 : helpmaster@twosome.co.kr",
+    "Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.",
+  ];
+  const footerNavList = footerNavContent.map((list) => <p>{list}</p>);
   return (
     <>
       <S.header>
@@ -604,37 +609,21 @@ function App() {
               </h1>
             </S.newsH1>
             <S.aContainer>
-              <a
-                href="#"
-                id="Bodo"
-                onClick={() => {
-                  setBodo(true);
-                  setGongy(false);
-                }}
-                selectBodo={selectBodo}
-                notGongy={notGongy}
-              >
-                보도자료
-              </a>
-              <a
-                href="#"
-                id="Gongy"
-                onClick={() => {
-                  setBodo(false);
-                  setGongy(true);
-                }}
-                selectGongy={selectGongy}
-                notBodo={notBodo}
-              >
-                공지사항
-              </a>
+              <a>공지사항</a>
             </S.aContainer>
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
             <S.gongydiv>
               <S.bodoSubDiv>
-                <p>등록돤 게시글이 없습니다</p>
+                <nav>
+                  <p>등록돤 게시글이 없습니다</p>
+                </nav>
+                <nav>
+                  <p>등록돤 게시글이 없습니다</p>
+                </nav>
+                <nav>
+                  <p>등록돤 게시글이 없습니다</p>
+                </nav>
               </S.bodoSubDiv>
-              {/* <S. */}
             </S.gongydiv>
           </S.newsMainDiv>
         </S.newsPage>
@@ -670,20 +659,7 @@ function App() {
             <hr />
             <S.endBottomDiv>
               {endInnerDivAList}
-              <S.footerNav>
-                <p>
-                  대표이사 : 이영상 | 개인정보보호책임자 : 장재호 |
-                  사업자등록번호 : 404-86-01054
-                </p>
-                <p>
-                  통신판매업종신고증 : 제 2018-서울중구-0353호 | 대표이메일 :
-                  helpmaster@twosome.co.kr
-                </p>
-                <p>
-                  Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights
-                  Reserved.
-                </p>
-              </S.footerNav>
+              <S.footerNav>{footerNavList}</S.footerNav>
               <S.imgContainer>{endInnerImgList}</S.imgContainer>
             </S.endBottomDiv>
           </S.endContainer>
