@@ -246,6 +246,7 @@ function App() {
     "Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.",
   ];
   const footerNavList = footerNavContent.map((list) => <p>{list}</p>);
+  
   return (
     <>
       <S.header>
@@ -615,13 +616,26 @@ function App() {
             <S.gongydiv>
               <S.bodoSubDiv>
                 <nav>
-                  <p>등록돤 게시글이 없습니다</p>
+                  <div>
+                    <h3>공지사항</h3>
+                    <a>개인정보처리방침 개정 안내</a>
+                    <p>2022-10-19</p>
+                  </div>
                 </nav>
                 <nav>
-                  <p>등록돤 게시글이 없습니다</p>
+                  <div>
+                    <h3>공지사항</h3>
+                    <a>위치기반서비스 이용약관 개정 안내</a>
+                    <p>2022-09-07</p>
+                  </div>
                 </nav>
                 <nav>
-                  <p>등록돤 게시글이 없습니다</p>
+                  <div>
+                    <h3>공지사항</h3>
+                    <a>개인정보처리방침 개정 안내</a>
+                    <p>2022-09-07</p>
+                  </div>
+                  '
                 </nav>
               </S.bodoSubDiv>
             </S.gongydiv>
@@ -668,19 +682,5 @@ function App() {
     </>
   );
 }
-//{
-/* <S.backImg
-src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
-alt="배경1-2"
-/>
-
-<img src="/resources/images/content/img_p_coffeestory.jpg" alt="커피 사진"></img> 
-<S.backImg src="https://www.twosome.co.kr/resources/images/main/main_alist_pc.jpg" />
-
-<S.backImg
-src="https://mcdn.twosome.co.kr/upload/MODS0030/202106/MODS0030_20210617220308_xgmVdukT"
-alt="배경1-2"
-/> */
-//}
 
 export default App;

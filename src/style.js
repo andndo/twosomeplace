@@ -224,7 +224,6 @@ export const franchiseBackground = styled.div`
 `;
 export const gongydiv = styled.div`
   position: absolute;
-  background-color: red;
   width: 590.39px;
   height: 706.69px;
   top: 134px;
@@ -234,22 +233,40 @@ export const gongydiv = styled.div`
 export const bodoSubDiv = styled.div`
   height: 100%;
   width: 590.39px;
-  background-color: blue;
   nav {
     width: 100%;
     height: 181px;
-    p {
-      align-items: center;
-      display: block;
-      position: relative;
-      padding: 38px 40px;
-      color: #333333;
+    margin: 0;
+    padding: 0 38px;
+    
+    div {
+      h3 {
+        font-size: 16px;
+        color: red;
+      }
+      a {
+        margin: 0;
+        text-decoration: none;
+        text-underline-position: under;
+      }
+      p {
+        align-items: center;
+        display: block;
+        position: relative;
+        color: #333333;
+      }
     }
     &:hover {
       box-shadow: inset 706.69px 0 #000;
       transition: all 0.3s;
-      p {
-        color: #fff;
+      div {
+        a {
+          color: #fff;
+          text-decoration: underline;
+        }
+        p {
+          color: #fff;
+        }
       }
     }
   }
