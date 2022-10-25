@@ -246,7 +246,19 @@ function App() {
     "Copyright ⓒ 2021 A TWOSOME PLACE Co., LTD. All Rights Reserved.",
   ];
   const footerNavList = footerNavContent.map((list) => <p>{list}</p>);
-  
+  const bodoA = [
+    "개인정보처리방침 개정 안내",
+    "위치기반서비스 이용약관 개정 안내",
+    "개인정보처리방침 개정 안내",
+  ];
+  const bodoP = ["2022-10-07", "2022-09-07", "2022-09-07"];
+  const bodoList = bodoA.map((list, index) => (
+    <nav>
+      <h3>공지사항</h3>
+      <a>{list}</a>
+      <p>{bodoP[index]}</p>
+    </nav>
+  ));
   return (
     <>
       <S.header>
@@ -560,6 +572,8 @@ function App() {
             </p>
           </div>
         </S.A_list_img>
+        <div className="inner bg-blue">5</div>
+
         <S.franchisePage>
           <S.franchiseBackground>{franchiseImgList}</S.franchiseBackground>
 
@@ -599,7 +613,6 @@ function App() {
             </S.franchiseBtnContainer>
           </S.franchiseMainDiv>
         </S.franchisePage>
-        <div className="inner bg-blue">5</div>
         <S.newsPage>
           <S.newsMainDiv>
             <S.newsH1>
@@ -615,28 +628,7 @@ function App() {
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
             <S.gongydiv>
               <S.bodoSubDiv>
-                <nav>
-                  <div>
-                    <h3>공지사항</h3>
-                    <a>개인정보처리방침 개정 안내</a>
-                    <p>2022-10-19</p>
-                  </div>
-                </nav>
-                <nav>
-                  <div>
-                    <h3>공지사항</h3>
-                    <a>위치기반서비스 이용약관 개정 안내</a>
-                    <p>2022-09-07</p>
-                  </div>
-                </nav>
-                <nav>
-                  <div>
-                    <h3>공지사항</h3>
-                    <a>개인정보처리방침 개정 안내</a>
-                    <p>2022-09-07</p>
-                  </div>
-                  '
-                </nav>
+                {bodoList}
               </S.bodoSubDiv>
             </S.gongydiv>
           </S.newsMainDiv>
