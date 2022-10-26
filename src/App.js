@@ -254,9 +254,11 @@ function App() {
   const bodoP = ["2022-10-07", "2022-09-07", "2022-09-07"];
   const bodoList = bodoA.map((list, index) => (
     <nav>
-      <h3>공지사항</h3>
-      <a>{list}</a>
-      <p>{bodoP[index]}</p>
+      <div>
+        <h3>공지사항</h3>
+        <a>{list}</a>
+        <p>{bodoP[index]}</p>
+      </div>
     </nav>
   ));
   return (
@@ -533,20 +535,20 @@ function App() {
           <S.MenuStoryMainDiv>
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
-            <ul>
-              <li>
+            <nav>
+              <div>
                 <p>전문가의 섬세함으로 완성한 최상의 커피</p>
                 <a>COFFEE STORY</a>
-              </li>
-              <li>
+              </div>
+              <div>
                 <p>다양한 프리미엄 케이크 & 디저트</p>
                 <a>DESSERT STORY</a>
-              </li>
-              <li>
+              </div>
+              <div>
                 <p>가볍게 즐기는 맛있는 식사, 델리</p>
                 <a>DELI STORY</a>
-              </li>
-            </ul>
+              </div>
+            </nav>
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
 
@@ -627,9 +629,7 @@ function App() {
             </S.aContainer>
             <img src="https://www.twosome.co.kr/resources/images/main/main_news_illust.svg" />
             <S.gongydiv>
-              <S.bodoSubDiv>
-                {bodoList}
-              </S.bodoSubDiv>
+              <S.bodoSubDiv>{bodoList}</S.bodoSubDiv>
             </S.gongydiv>
           </S.newsMainDiv>
         </S.newsPage>

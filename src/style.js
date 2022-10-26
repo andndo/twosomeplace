@@ -238,8 +238,10 @@ export const bodoSubDiv = styled.div`
     height: 181px;
     margin: 0;
     padding: 0 38px;
-    
+
     div {
+      padding-top: 20px;
+
       h3 {
         font-size: 16px;
         color: red;
@@ -364,6 +366,28 @@ export const endContainer = styled.div`
     border: 0;
   }
 `;
+export const MenuStroyClickDiv = styled.div`
+  p {
+    opacity: 1;
+    font-size: 15px;
+    color: #000;
+    font-weight: 900;
+  }
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+`;
+export const MenuStroyNoneClickDiv = styled.div`
+  p{
+    opacity: 0;
+  }
+  a {
+    text-decoration: none;
+    color:#999999;
+  }
+`;
+
 export const MenuStoryPage = styled.div`
   background-color: #fff;
   width: 100%;
@@ -386,13 +410,14 @@ export const MenuStoryMainDiv = styled.div`
     font-size: 96px;
     font-weight: 800;
   }
-  ul {
-    li {
-      list-style: none;
+  nav {
+    margin-left: 55px;
+    div {
       margin-bottom: 28px;
       p {
-        font-size: 16px;
+        font-size: 15px;
         color: #000;
+        font-weight: 900;
       }
       a {
         font-size: 32px;
