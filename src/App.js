@@ -261,6 +261,19 @@ function App() {
       </div>
     </nav>
   ));
+  const [MenuClickNum, setMenuClickNum] = useState(0);
+  const MenuOnClick = (event) => {
+    event.key === "1" ? (
+      <S.MenuStroyClickDiv>
+        <p>asdf</p>
+        <a>fweaawe</a>
+      </S.MenuStroyClickDiv>
+    ) : (
+      <S.MenuStroyNoneClickDiv>
+        <a>afsdew</a>
+      </S.MenuStroyNoneClickDiv>
+    );
+  };
   return (
     <>
       <S.header>
@@ -536,15 +549,15 @@ function App() {
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
             <nav>
-              <div>
+              <div onClick={MenuOnClick} key="1">
                 <p>전문가의 섬세함으로 완성한 최상의 커피</p>
                 <a>COFFEE STORY</a>
               </div>
-              <div>
+              <div onClick={MenuOnClick} key="2">
                 <p>다양한 프리미엄 케이크 & 디저트</p>
                 <a>DESSERT STORY</a>
               </div>
-              <div>
+              <div onClick={MenuOnClick} key="3">
                 <p>가볍게 즐기는 맛있는 식사, 델리</p>
                 <a>DELI STORY</a>
               </div>
