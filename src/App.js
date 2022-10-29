@@ -587,7 +587,12 @@ function App() {
             </p>
           </div>
         </S.A_list_img>
-        <div className="inner bg-blue">5</div>
+      <S.BrandSupportPage>
+        <S.BrandSupportMaindev>
+          <h1>BRAND<br/>SUPPORT
+          </h1>
+        </S.BrandSupportMaindev>
+      </S.BrandSupportPage>
 
         <S.franchisePage>
           <S.franchiseBackground>{franchiseImgList}</S.franchiseBackground>

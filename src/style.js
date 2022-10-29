@@ -139,6 +139,24 @@ export const header = styled.div`
     }
   }
 `;
+export const BrandSupportPage = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+`;
+export const BrandSupportMaindev = styled.div`
+  width: 1312px;
+  height: 100%;
+
+  background-color: orange;
+  h1 {
+    font-size: 96px;
+    font-weight: 800;
+    margin-top: 155px;
+  }
+`;
 export const franchiseMainDiv = styled.div`
   padding-top: 90px;
   z-index: 99;
@@ -379,12 +397,12 @@ export const MenuStroyClickDiv = styled.div`
   }
 `;
 export const MenuStroyNoneClickDiv = styled.div`
-  p{
+  p {
     opacity: 0;
   }
   a {
     text-decoration: none;
-    color:#999999;
+    color: #999999;
   }
 `;
 
