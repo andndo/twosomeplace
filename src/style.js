@@ -516,7 +516,10 @@ export const coffeeNameBox = styled.div`
   background-color: blue;
   /* overflow: hidden; */
   margin-left: 90px;
+
   div {
+    position: absolute;
+   // gap: 60px;
     text-align: center;
   }
 `;

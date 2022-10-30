@@ -191,10 +191,12 @@ function App() {
   // console.log(coffeeName.push(coffeeName.shift()));
   // coffeeName.unshift(coffeeName.pop());
   const a = 1;
+  const coffeeCurrentList = "";
   const coffeeNameList = coffeeName.map((list, index, current) => (
-    <div>{index === 0 ? list : ""}</div>
+    <div>{index === 0 ? (coffeeCurrentList = list) : ""}</div>
   ));
   const onClickMenuRight = () => {};
+
   const endInnerImg = [
     "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
     "https://www.twosome.co.kr/resources/images/icon/ico_32_instagram.svg",
@@ -533,7 +535,7 @@ function App() {
                   />
                 </S.rightBtn>
                 <S.coffeeNameBox>
-                  <div>{coffeeNameList}</div>
+                  <div>{coffeeCurrentList}</div>
                 </S.coffeeNameBox>
                 <S.rightBtn onClick={onClickRight}>
                   <img
@@ -587,12 +589,15 @@ function App() {
             </p>
           </div>
         </S.A_list_img>
-      <S.BrandSupportPage>
-        <S.BrandSupportMaindev>
-          <h1>BRAND<br/>SUPPORT
-          </h1>
-        </S.BrandSupportMaindev>
-      </S.BrandSupportPage>
+        <S.BrandSupportPage>
+          <S.BrandSupportMaindev>
+            <h1>
+              BRAND
+              <br />
+              SUPPORT<div className="red-point"></div>
+            </h1>
+          </S.BrandSupportMaindev>
+        </S.BrandSupportPage>
 
         <S.franchisePage>
           <S.franchiseBackground>{franchiseImgList}</S.franchiseBackground>
