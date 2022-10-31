@@ -182,20 +182,21 @@ function App() {
     </div>
   ));
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [coffeeName, setCoffeeName] = useState([
+  const coffeeName = [
     "롱블랙",
     "TWG 1837 블랙티",
     "스트로베리 피치 프라페",
     "스페니쉬 연유라떼",
-  ]);
-  // console.log(coffeeName.push(coffeeName.shift()));
-  // coffeeName.unshift(coffeeName.pop());
+  ];
   const a = 1;
   const coffeeCurrentList = "";
   const coffeeNameList = coffeeName.map((list, index, current) => (
-    <div>{index === 0 ? (coffeeCurrentList = list) : ""}</div>
+    <div>{index === currentIndex ? list : ""}</div>
   ));
-  const onClickMenuRight = () => {};
+  const onClickMenuRight = () => {
+    if (currentIndex >= 3) setCurrentIndex(0);
+    else setCurrentIndex(currentIndex + 1);
+  };
 
   const endInnerImg = [
     "https://www.twosome.co.kr/resources/images/icon/ico_32_facebook.svg",
@@ -535,9 +536,9 @@ function App() {
                   />
                 </S.rightBtn>
                 <S.coffeeNameBox>
-                  <div>{coffeeCurrentList}</div>
+                  <div>{coffeeNameList}</div>
                 </S.coffeeNameBox>
-                <S.rightBtn onClick={onClickRight}>
+                <S.rightBtn onClick={onClickMenuRight}>
                   <img
                     src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
                     alt=""
