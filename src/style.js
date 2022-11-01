@@ -143,12 +143,12 @@ export const currentImg = styled.img`
   width: 488px;
   height: 488px;
   z-index: 0;
-`
+`;
 export const otherImg = styled.img`
   width: 176px;
   height: 176px;
-  z-index: -1;
-`
+  z-index: 1;
+`;
 
 export const BrandSupportPage = styled.div`
   width: 100%;
@@ -429,7 +429,7 @@ export const MenuStoryPage = styled.div`
 export const MenuStoryMainDiv = styled.div`
   width: 1312px;
   height: 540.95px;
-
+  z-index: 1;
   h1 {
     margin-top: 20px;
     margin-left: 50px;
@@ -483,9 +483,9 @@ export const swiperDiv2 = styled.div`
   position: absolute;
   z-index: 999;
   /* left: 50%; */
-  left: -960px;
+  left: -1005px;
   top: 720px;
-  width: 240px;
+  width: 424px;
   height: 56px;
   right: 100px;
   bottom: 172px;
@@ -494,11 +494,7 @@ export const swiperDiv2 = styled.div`
   justify-content: center;
   transform: translate(0, 0);
   color: #fff;
-  div {
-    width: 240px;
-    display: inline-flex;
-    justify-content: center;
-  }
+
   .directionKey {
     width: 24px;
     height: 24px;
@@ -515,18 +511,19 @@ export const swiperDiv2 = styled.div`
   }
 `;
 export const coffeeNameBox = styled.div`
-  width: 50px;
+  width: 180px;
+  background-color: red;
   height: 25px;
-  background-color: blue;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* overflow: hidden; */
   margin-left: 90px;
-
-  div {
-    position: absolute;
-   // gap: 60px;
-    text-align: center;
-  }
+  top: 15px;
+  left: 120px;
 `;
+
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
@@ -732,7 +729,16 @@ export const firstMainImg = styled.div`
     margin: 0;
   }
 `;
-export const rightBtn = styled.div`
-  /* background: url("https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg")
-    50% 50% no-repeat; */
+export const rightBtn = styled.div``;
+export const rightBtn2 = styled.div`
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+`;
+export const leftBtn = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left:10px;
 `;
