@@ -139,6 +139,17 @@ export const header = styled.div`
     }
   }
 `;
+export const currentImg = styled.img`
+  width: 488px;
+  height: 488px;
+  z-index: 0;
+`
+export const otherImg = styled.img`
+  width: 176px;
+  height: 176px;
+  z-index: -1;
+`
+
 export const BrandSupportPage = styled.div`
   width: 100%;
   height: 100vh;
@@ -291,7 +302,6 @@ export const bodoSubDiv = styled.div`
     }
   }
 `;
-export const gongySubDiv = styled.div``;
 export const endRightDiv = styled.div`
   width: auto;
   position: absolute;
@@ -427,6 +437,7 @@ export const MenuStoryMainDiv = styled.div`
     color: #000;
     font-size: 96px;
     font-weight: 800;
+    z-index: 100;
   }
   nav {
     margin-left: 55px;
@@ -458,17 +469,10 @@ export const MenuContainer = styled.div`
 
 export const MenuImgContainer = styled.div`
   position: absolute;
-  right: 70px;
-  top: 570px;
+  right: 550px;
+  top: 275px;
   > div {
     display: inline-flex;
-  }
-  div > div {
-    img {
-      margin-left: 50px;
-      width: 176px;
-      height: 176px;
-    }
   }
 `;
 export const MenuStoryImgMain = styled.div`

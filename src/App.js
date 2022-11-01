@@ -171,16 +171,12 @@ function App() {
   };
 
   const coffeeSlides = [
-    "https://www.twosome.co.kr/resources/images/main/menu_coffee1.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee2.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee3.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_coffee1.jpg",
   ];
-  const coffeeList = coffeeSlides.map((list, index) => (
-    <div>
-      <img src={list} />
-    </div>
-  ));
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const coffeeName = [
     "롱블랙",
@@ -190,12 +186,20 @@ function App() {
   ];
   const a = 1;
   const coffeeCurrentList = "";
-  const coffeeNameList = coffeeName.map((list, index, current) => (
+  const coffeeList = coffeeSlides.map((list, index) =>
+    index === currentIndex ? (
+      <S.currentImg src={coffeeSlides[currentIndex]} />
+    ) : (
+      <otherImg src={coffeeSlides[2]} />
+    )
+  );
+  const coffeeNameList = coffeeName.map((list, index) => (
     <div>{index === currentIndex ? list : ""}</div>
   ));
   const onClickMenuRight = () => {
     if (currentIndex >= 3) setCurrentIndex(0);
     else setCurrentIndex(currentIndex + 1);
+    console.log(coffeeName[currentIndex]);
   };
 
   const endInnerImg = [
