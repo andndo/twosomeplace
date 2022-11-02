@@ -185,13 +185,15 @@ function App() {
     "스페니쉬 연유라떼",
   ];
   const a = 1;
-  const coffeeCurrentList = "";
-  const coffeeList = coffeeSlides.map((list, index) =>
+  const coffeeCurrentList = coffeeSlides.map((list, index) =>
     index === currentIndex ? (
       <S.currentImg src={coffeeSlides[currentIndex]} />
     ) : (
       <></>
     )
+  );
+  const coffeeList = coffeeSlides.map((list, index) =>
+    index === currentIndex ? <></> : <S.otherImg src={list} />
   );
   const coffeeNameList = coffeeName.map((list, index) => (
     <div>{index === currentIndex ? list : ""}</div>
@@ -531,28 +533,31 @@ function App() {
         <S.MenuStoryPage>
           <S.MenuContainer>
             <S.MenuImgContainer>
-              <div>{coffeeList}</div>
+              <div>{coffeeCurrentList}</div>
+              <S.otherImgContainer>
+                <div>{coffeeList}</div>
+              </S.otherImgContainer>
             </S.MenuImgContainer>
             <S.swiperDiv2>
-                <div className="controlImg">
-                  <S.leftBtn onClick={onClickMenuLeft}>
-                    <img
-                      src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
-                      alt=""
-                      className="directionKey"
-                    />
-                  </S.leftBtn>
-                  <S.coffeeNameBox>
-                    <nav>{coffeeNameList}</nav>
-                  </S.coffeeNameBox>
-                  <S.rightBtn2 onClick={onClickMenuRight}>
-                    <img
-                      src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
-                      alt=""
-                      className="directionKey"
-                    />
-                  </S.rightBtn2>
-                </div>
+              <div className="controlImg">
+                <S.leftBtn onClick={onClickMenuLeft}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                    alt=""
+                    className="directionKey"
+                  />
+                </S.leftBtn>
+                <S.coffeeNameBox>
+                  <nav>{coffeeNameList}</nav>
+                </S.coffeeNameBox>
+                <S.rightBtn2 onClick={onClickMenuRight}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                    alt=""
+                    className="directionKey"
+                  />
+                </S.rightBtn2>
+              </div>
             </S.swiperDiv2>
           </S.MenuContainer>
           <S.MenuStoryMainDiv>

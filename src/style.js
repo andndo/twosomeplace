@@ -475,6 +475,14 @@ export const MenuImgContainer = styled.div`
     display: inline-flex;
   }
 `;
+export const otherImgContainer = styled.div`
+  position: absolute;
+  div > div > img {
+    margin-bottom:20px;
+
+    display: inline-flex;
+  }
+`;
 export const MenuStoryImgMain = styled.div`
   position: relative;
 `;
@@ -512,7 +520,6 @@ export const swiperDiv2 = styled.div`
 `;
 export const coffeeNameBox = styled.div`
   width: 180px;
-  background-color: red;
   height: 25px;
   position: absolute;
   display: flex;
@@ -740,5 +747,5 @@ export const leftBtn = styled.div`
   cursor: pointer;
   position: absolute;
   top: 15px;
-  left:10px;
+  left: 10px;
 `;
