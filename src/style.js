@@ -477,9 +477,12 @@ export const MenuImgContainer = styled.div`
 `;
 export const otherImgContainer = styled.div`
   position: absolute;
-  div > div > img {
-    margin-bottom:20px;
-
+  width: 660px;
+  margin-top: 310px;
+  div > img {
+    position: relative;
+ 
+    margin-left: 30px;
     display: inline-flex;
   }
 `;
