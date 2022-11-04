@@ -123,17 +123,7 @@ button {
   background-color: #d50037;
   z-index: 50;
 }
-.bg-yellow {
-  background-color: #f7f6cf;
-}
 
-.bg-blue {
-  background-color: #b6d8f2;
-}
-
-.bg-pink {
-  background-color: #f4cfdf;
-}
 .progress-div {
   transform: rotate(90deg);
   top: 430px;
