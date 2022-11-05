@@ -286,6 +286,14 @@ function App() {
       </S.MenuStroyNoneClickDiv>
     );
   };
+  const introduceTwosome = [
+    "비전체계",
+    "연혁",
+    "BI",
+    "20주년 이야기",
+    "Recruit",
+  ];
+  const introduceTwosomeList = introduceTwosome.map((list) => <li>{list}</li>);
   return (
     <>
       <S.HeaderMain>
@@ -303,11 +311,7 @@ function App() {
                   <li>
                     <h4>투썸플레이스</h4>
                     <ul>
-                      <li>비전체계</li>
-                      <li>연혁</li>
-                      <li>BI</li>
-                      <li>20주년 이야기</li>
-                      <li>Recruit</li>
+                      {introduceTwosomeList}
                     </ul>
                   </li>
                   <li>
