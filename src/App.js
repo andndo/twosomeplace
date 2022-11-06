@@ -294,6 +294,23 @@ function App() {
     "Recruit",
   ];
   const introduceTwosomeList = introduceTwosome.map((list) => <li>{list}</li>);
+  const MenuStoryHeader = ["커피이야기", "디저트이야기", "델리이야기"];
+  const MenuStoryHeaderList = MenuStoryHeader.map((list) => (
+    <li>
+      <h4>{list}</h4>
+    </li>
+  ));
+  const BrandSupportHeader = [
+    "어썸 페어링 플랜트",
+    "어썸 디저트 플랜트",
+    "C&D센터",
+    "SEP센터",
+  ];
+  const BrandSupportHeaderList = BrandSupportHeader.map((list) => {
+    <li>
+      <h4>{list}</h4>
+    </li>;
+  });
   return (
     <>
       <S.HeaderMain>
@@ -310,9 +327,7 @@ function App() {
                 <ul class="inner">
                   <li>
                     <h4>투썸플레이스</h4>
-                    <ul>
-                      {introduceTwosomeList}
-                    </ul>
+                    <ul>{introduceTwosomeList}</ul>
                   </li>
                   <li>
                     <h4>매장</h4>
@@ -333,15 +348,7 @@ function App() {
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
-                  <li>
-                    <h4>커피이야기</h4>
-                  </li>
-                  <li>
-                    <h4>디저트이야기</h4>
-                  </li>
-                  <li>
-                    <h4>델리이야기</h4>
-                  </li>
+                  {MenuStoryHeaderList}
                 </ul>
               </div>
             </div>
@@ -352,18 +359,7 @@ function App() {
             <div class="item__contents">
               <div class="contents__menu">
                 <ul class="inner">
-                  <li>
-                    <h4>어썸 페어링 플랜트</h4>
-                  </li>
-                  <li>
-                    <h4>어썸 디저트 플랜트</h4>
-                  </li>
-                  <li>
-                    <h4>C&D센터</h4>
-                  </li>
-                  <li>
-                    <h4>SEP센터</h4>
-                  </li>
+                  {BrandSupportHeaderList}
                 </ul>
               </div>
             </div>
