@@ -311,6 +311,21 @@ function App() {
       <h4>{list}</h4>
     </li>;
   });
+  const endInnerContentAdress = [
+    "https://www.twosome.co.kr/cp/bulkOrderinquiry.do",
+    "https://www.twosome.co.kr/so/storeStartupCounselApply.do",
+    "https://www.twosome.co.kr/cp/cyberInformInfo.do",
+  ];
+  const endInnerContent = [
+    "기업 및 단체구매안내",
+    "가맹상담신청",
+    "사이버 신문고",
+  ];
+  const endInnerList = endInnerContent.map((list, index) => (
+    <li>
+      <a href={endInnerContentAdress[index]}>{list}</a>
+    </li>
+  ));
   return (
     <>
       <S.HeaderMain>
@@ -347,9 +362,7 @@ function App() {
             <nav className="text">메뉴이야기</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">
-                  {MenuStoryHeaderList}
-                </ul>
+                <ul class="inner">{MenuStoryHeaderList}</ul>
               </div>
             </div>
           </li>
@@ -358,9 +371,7 @@ function App() {
             <nav className="text">브랜드 지원</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">
-                  {BrandSupportHeaderList}
-                </ul>
+                <ul class="inner">{BrandSupportHeaderList}</ul>
               </div>
             </div>
           </li>
@@ -630,23 +641,7 @@ function App() {
         </S.newsPage>
         <S.endInner>
           <S.endContainer>
-            <ul>
-              <li>
-                <a href="https://www.twosome.co.kr/cp/bulkOrderinquiry.do">
-                  기업 및 단체구매안내
-                </a>
-              </li>
-              <li>
-                <a href="https://www.twosome.co.kr/so/storeStartupCounselApply.do">
-                  가맹상담신청
-                </a>
-              </li>
-              <li>
-                <a href="https://www.twosome.co.kr/cp/cyberInformInfo.do">
-                  사이버신문고
-                </a>
-              </li>
-            </ul>
+            <ul>{endInnerList}</ul>
             <S.endRightDiv>
               <h3>Adress</h3>
               <p>
