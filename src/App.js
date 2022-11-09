@@ -580,6 +580,12 @@ function App() {
               SUPPORT<div className="red-point"></div>
             </h1>
           </S.BrandSupportMaindev>
+          <S.swiperSlideWrapper>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg"/>
+              </S.swiperSlide>
+          </S.swiperSlideWrapper>
         </S.BrandSupportPage>
 
         <S.franchisePage>

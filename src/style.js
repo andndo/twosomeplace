@@ -96,7 +96,7 @@ export const HeaderMain = styled.div`
     li {
       display: inline-block;
       .text {
-      //  margin-left: 40px;
+        //  margin-left: 40px;
         display: inline-flex;
         height: 100px;
         width: 200px;
@@ -104,18 +104,18 @@ export const HeaderMain = styled.div`
         justify-content: center;
         align-items: center;
       }
-      .cubeImg{
-      //  margin-left: 380px;
+      .cubeImg {
+        //  margin-left: 380px;
       }
       div > div > ul {
-      //  margin-left: 4px;
+        //  margin-left: 4px;
         li {
           display: block;
           h4 {
             font-size: 15px;
           }
           ul {
-           // margin-left: -20px;
+            // margin-left: -20px;
             li {
               display: block;
               font-size: 13px;
@@ -206,10 +206,35 @@ export const otherImg = styled.img`
   height: 176px;
   z-index: 1;
 `;
-
+export const swiperSlideWrapper = styled.div`
+  margin: 0;
+  width: 1920px;
+  height: 520px;
+  position: absolute;
+  top: 230px;
+  left: 560px;
+  background-color: green;
+  overflow: hidden;
+`;
+export const swiperSlide = styled.div`
+  width: 1147.88px;
+  height: 100%;
+  p {
+    transform: rotate(90deg);
+    background-color: red;
+    margin-left: -1125px;
+    margin-bottom: 60px;
+    color: #000;
+  }
+  img {
+    width: 552px;
+    height: 552px;
+  }
+`;
 export const BrandSupportPage = styled.div`
   width: 100%;
   height: 100vh;
+  position: relative;
   background-color: blue;
   display: flex;
   justify-content: center;
@@ -538,7 +563,7 @@ export const otherImgContainer = styled.div`
   margin-top: 310px;
   div > img {
     position: relative;
- 
+
     margin-left: 30px;
     display: inline-flex;
   }
