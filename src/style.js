@@ -229,8 +229,23 @@ export const swiperSlide = styled.div`
   img {
     width: 552px;
     height: 552px;
+    margin-top: -100px;
+    margin-left: 10px;
   }
 `;
+export const swiperSlideSub = styled.div`
+  width: 312px;
+  height: 342px;
+  background-color: purple;
+  position: absolute;
+  bottom: 0;
+  left: 634px;
+  img{
+    width: 64px;
+    height: 64px;
+    margin-top: 20px;
+  }
+`
 export const BrandSupportPage = styled.div`
   width: 100%;
   height: 100vh;

@@ -581,10 +581,14 @@ function App() {
             </h1>
           </S.BrandSupportMaindev>
           <S.swiperSlideWrapper>
-              <S.swiperSlide>
-                <p>____Roasting Plant</p>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg"/>
-              </S.swiperSlide>
+            <S.swiperSlide>
+              <p>____Roasting Plant</p>
+              <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
+              <S.swiperSlideSub>
+                <img src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg" />
+                <a>로스팅 플랜트 <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"/></a>
+              </S.swiperSlideSub>
+            </S.swiperSlide>
           </S.swiperSlideWrapper>
         </S.BrandSupportPage>
 
