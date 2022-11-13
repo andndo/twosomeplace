@@ -586,7 +586,18 @@ function App() {
               <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
               <S.swiperSlideSub>
                 <img src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg" />
-                <a>로스팅 플랜트 <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"/></a>
+                <S.rostingPlant>
+                  <a>
+                    로스팅 플랜트
+                    <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                  </a>
+                </S.rostingPlant>
+                <nav>
+                  <p>
+                    원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의
+                    커피 품질을 만듭니다.
+                  </p>
+                </nav>
               </S.swiperSlideSub>
             </S.swiperSlide>
           </S.swiperSlideWrapper>

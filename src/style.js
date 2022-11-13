@@ -240,12 +240,32 @@ export const swiperSlideSub = styled.div`
   position: absolute;
   bottom: 0;
   left: 634px;
-  img{
+  img {
     width: 64px;
     height: 64px;
     margin-top: 20px;
   }
-`
+  nav {
+    display: block;
+    margin: 0;
+    p {
+      transform: rotate(-90deg);
+      font-size: 18px;
+    }
+  }
+`;
+export const rostingPlant = styled.div`
+  a {
+    line-height: 1;
+    font-size: 32px;
+    font-weight: 900;
+    text-decoration: underline;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+`;
 export const BrandSupportPage = styled.div`
   width: 100%;
   height: 100vh;
