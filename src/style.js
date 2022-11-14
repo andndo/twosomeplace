@@ -233,6 +233,35 @@ export const swiperSlide = styled.div`
     margin-left: 10px;
   }
 `;
+export const swiperDiv3 = styled.div`
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  /* left: 50%; */
+  width: 312px;
+  height: 56px;
+  bottom: 0;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  transform: translate(0, 0);
+  color: #fff;
+
+  .directionKey {
+    width: 24px;
+    height: 24px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  div {
+    margin: 0;
+    padding: 0;
+    p {
+      display: flex;
+    }
+  }
+`;
 export const swiperSlideSub = styled.div`
   width: 312px;
   height: 342px;
@@ -245,14 +274,7 @@ export const swiperSlideSub = styled.div`
     height: 64px;
     margin-top: 20px;
   }
-  nav {
-    display: block;
-    margin: 0;
-    p {
-      transform: rotate(-90deg);
-      font-size: 18px;
-    }
-  }
+
 `;
 export const rostingPlant = styled.div`
   a {
@@ -265,6 +287,10 @@ export const rostingPlant = styled.div`
       height: 30px;
     }
   }
+  h4 {
+      font-size: 18px;
+    }
+
 `;
 export const BrandSupportPage = styled.div`
   width: 100%;

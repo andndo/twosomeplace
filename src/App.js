@@ -591,13 +591,32 @@ function App() {
                     로스팅 플랜트
                     <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
                   </a>
-                </S.rostingPlant>
-                <nav>
-                  <p>
+                  <h4>
                     원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의
                     커피 품질을 만듭니다.
-                  </p>
-                </nav>
+                  </h4>
+                </S.rostingPlant>
+                <S.swiperDiv3>
+                  <div className="controlImg">
+                    <S.leftBtn>
+                      <img
+                        src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                        alt=""
+                        className="directionKey3"
+                      />
+                    </S.leftBtn>
+                    <S.coffeeNameBox>
+                      <nav>{coffeeNameList}</nav>
+                    </S.coffeeNameBox>
+                    <S.rightBtn2>
+                      <img
+                        src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                        alt=""
+                        className="directionKey3"
+                      />
+                    </S.rightBtn2>
+                  </div>
+                </S.swiperDiv3>
               </S.swiperSlideSub>
             </S.swiperSlide>
           </S.swiperSlideWrapper>
