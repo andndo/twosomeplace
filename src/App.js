@@ -273,7 +273,17 @@ function App() {
       </div>
     </nav>
   ));
-  const [MenuClickNum, setMenuClickNum] = useState(0);
+  const [MenuClickNum, setMenuClickNum] = useState(1);
+  const MenuBarRightClick = () => {
+    if (MenuClickNum < 4) {
+      setMenuClickNum(MenuClickNum + 1);
+    }
+  };
+  const MenuBarLeftClick = () => {
+    if (MenuClickNum > 1) {
+      setMenuClickNum(MenuClickNum - 1);
+    }
+  };
   const MenuOnClick = (event) => {
     event.key === "1" ? (
       <S.MenuStroyClickDiv>
@@ -585,7 +595,10 @@ function App() {
               <p>____Roasting Plant</p>
               <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
               <S.swiperSlideSub>
-                <img src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg" />
+                <img
+                  src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
+                  className="Beans"
+                />
                 <S.rostingPlant>
                   <a>
                     로스팅 플랜트
@@ -596,29 +609,27 @@ function App() {
                     커피 품질을 만듭니다.
                   </h4>
                 </S.rostingPlant>
-                <S.swiperDiv3>
-                  <div className="controlImg">
-                    <S.leftBtn>
-                      <img
-                        src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
-                        alt=""
-                        className="directionKey3"
-                      />
-                    </S.leftBtn>
-                    <S.coffeeNameBox>
-                      <nav>{coffeeNameList}</nav>
-                    </S.coffeeNameBox>
-                    <S.rightBtn2>
-                      <img
-                        src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
-                        alt=""
-                        className="directionKey3"
-                      />
-                    </S.rightBtn2>
-                  </div>
-                </S.swiperDiv3>
               </S.swiperSlideSub>
             </S.swiperSlide>
+            <S.swiperDiv3>
+              <nav>
+                <S.leftBtn2 onClick={MenuBarLeftClick}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_left.svg"
+                    alt=""
+                  />
+                </S.leftBtn2>
+                <S.coffeeNameBox2>
+                  <div>{MenuClickNum} / 4</div>
+                </S.coffeeNameBox2>
+                <S.rightBtn3 onClick={MenuBarRightClick}>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg"
+                    alt=""
+                  />
+                </S.rightBtn3>
+              </nav>
+            </S.swiperDiv3>
           </S.swiperSlideWrapper>
         </S.BrandSupportPage>
 

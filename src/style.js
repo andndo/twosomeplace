@@ -233,6 +233,26 @@ export const swiperSlide = styled.div`
     margin-left: 10px;
   }
 `;
+export const leftBtn2 = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+`;
+export const rightBtn3 = styled.div`
+  cursor: pointer;
+  position: absolute;
+  right: 9px;
+  top: 20px;
+  img {
+    width: 24px;
+    height: 24px;
+  }
+`;
 export const swiperDiv3 = styled.div`
   display: flex;
   position: absolute;
@@ -241,19 +261,13 @@ export const swiperDiv3 = styled.div`
   width: 312px;
   height: 56px;
   bottom: 0;
+  left:634px;
   background-color: black;
   align-items: center;
   justify-content: center;
   transform: translate(0, 0);
   color: #fff;
 
-  .directionKey {
-    width: 24px;
-    height: 24px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
   div {
     margin: 0;
     padding: 0;
@@ -269,12 +283,11 @@ export const swiperSlideSub = styled.div`
   position: absolute;
   bottom: 0;
   left: 634px;
-  img {
+  .Beans {
     width: 64px;
     height: 64px;
     margin-top: 20px;
   }
-
 `;
 export const rostingPlant = styled.div`
   a {
@@ -288,9 +301,8 @@ export const rostingPlant = styled.div`
     }
   }
   h4 {
-      font-size: 18px;
-    }
-
+    font-size: 18px;
+  }
 `;
 export const BrandSupportPage = styled.div`
   width: 100%;
@@ -677,6 +689,22 @@ export const coffeeNameBox = styled.div`
   left: 120px;
 `;
 
+export const coffeeNameBox2 = styled.div`
+  width: 180px;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  top: 15px;
+  left: 68px;
+  div{
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+  }
+`;
 export const newsPage = styled.div`
   width: 100%;
   height: 100vh;
