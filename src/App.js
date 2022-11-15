@@ -277,6 +277,7 @@ function App() {
   const MenuBarRightClick = () => {
     if (MenuClickNum < 4) {
       setMenuClickNum(MenuClickNum + 1);
+      console.log(MenuClickNum);
     }
   };
   const MenuBarLeftClick = () => {
@@ -591,26 +592,89 @@ function App() {
             </h1>
           </S.BrandSupportMaindev>
           <S.swiperSlideWrapper>
-            <S.swiperSlide>
-              <p>____Roasting Plant</p>
-              <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
-              <S.swiperSlideSub>
-                <img
-                  src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
-                  className="Beans"
-                />
-                <S.rostingPlant>
-                  <a>
-                    로스팅 플랜트
-                    <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                  </a>
-                  <h4>
-                    원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의
-                    커피 품질을 만듭니다.
-                  </h4>
-                </S.rostingPlant>
-              </S.swiperSlideSub>
-            </S.swiperSlide>
+            <S.slideDiv left={(MenuClickNum - 1) * 1247 * -1}>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
+                <S.swiperSlideSub>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
+                    className="Beans"
+                  />
+                  <S.rostingPlant>
+                    <a>
+                      로스팅 플랜트
+                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                    </a>
+                    <h4>
+                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
+                      최고의 커피 품질을 만듭니다.
+                    </h4>
+                  </S.rostingPlant>
+                </S.swiperSlideSub>
+              </S.swiperSlide>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand2.jpg" />
+                <S.swiperSlideSub>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand2.svg"
+                    className="Beans"
+                  />
+                  <S.desertPlant>
+                    <a>
+                      디저트 플랜트
+                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                    </a>
+                    <h4>
+                      최고의 맛과 품질을 자랑하는
+                      <br />
+                      투썸플레이스의 디저트를 만듭니다.
+                    </h4>
+                  </S.desertPlant>
+                </S.swiperSlideSub>
+              </S.swiperSlide>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
+                <S.swiperSlideSub>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
+                    className="Beans"
+                  />
+                  <S.rostingPlant>
+                    <a>
+                      로스팅 플랜트
+                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                    </a>
+                    <h4>
+                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
+                      최고의 커피 품질을 만듭니다.
+                    </h4>
+                  </S.rostingPlant>
+                </S.swiperSlideSub>
+              </S.swiperSlide>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
+                <S.swiperSlideSub>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
+                    className="Beans"
+                  />
+                  <S.rostingPlant>
+                    <a>
+                      로스팅 플랜트
+                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                    </a>
+                    <h4>
+                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
+                      최고의 커피 품질을 만듭니다.
+                    </h4>
+                  </S.rostingPlant>
+                </S.swiperSlideSub>
+              </S.swiperSlide>
+            </S.slideDiv>
             <S.swiperDiv3>
               <nav>
                 <S.leftBtn2 onClick={MenuBarLeftClick}>

@@ -206,23 +206,31 @@ export const otherImg = styled.img`
   height: 176px;
   z-index: 1;
 `;
+export const slideDiv = styled.div`
+  position: relative;
+  display: inline-flex;
+  transform: translateX(${(props) => props.left}px);
+  transition: transform 0.6s;
+`;
 export const swiperSlideWrapper = styled.div`
   margin: 0;
-  width: 1920px;
+  width: 7920px;
   height: 520px;
   position: absolute;
   top: 230px;
   left: 560px;
+  margin-right: 1000px;
   background-color: green;
   overflow: hidden;
 `;
 export const swiperSlide = styled.div`
-  width: 1147.88px;
+  width: 1247.88px;
   height: 100%;
+  position: relative;
   p {
     transform: rotate(90deg);
     background-color: red;
-    margin-left: -1125px;
+    margin-left: -1226px;
     margin-bottom: 60px;
     color: #000;
   }
@@ -233,6 +241,7 @@ export const swiperSlide = styled.div`
     margin-left: 10px;
   }
 `;
+
 export const leftBtn2 = styled.div`
   cursor: pointer;
   position: absolute;
@@ -260,8 +269,8 @@ export const swiperDiv3 = styled.div`
   /* left: 50%; */
   width: 312px;
   height: 56px;
-  bottom: 0;
-  left:634px;
+  bottom: 2px;
+  left: 634px;
   background-color: black;
   align-items: center;
   justify-content: center;
@@ -290,6 +299,21 @@ export const swiperSlideSub = styled.div`
   }
 `;
 export const rostingPlant = styled.div`
+  a {
+    line-height: 1;
+    font-size: 32px;
+    font-weight: 900;
+    text-decoration: underline;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  h4 {
+    font-size: 18px;
+  }
+`;
+export const desertPlant = styled.div`
   a {
     line-height: 1;
     font-size: 32px;
@@ -699,7 +723,7 @@ export const coffeeNameBox2 = styled.div`
   /* overflow: hidden; */
   top: 15px;
   left: 68px;
-  div{
+  div {
     font-size: 16px;
     font-weight: 600;
     color: #999;
