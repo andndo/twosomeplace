@@ -88,11 +88,11 @@ export const HeaderMain = styled.div`
   height: 100px;
   overflow: hidden;
   transition: 0.6s all;
-  z-index: 200;
+  z-index: 999;
+
   ul {
     list-style: none;
     float: left;
-    z-index: 200;
     li {
       display: inline-block;
       .text {
@@ -105,17 +105,17 @@ export const HeaderMain = styled.div`
         align-items: center;
       }
       .cubeImg {
-        //  margin-left: 380px;
+        margin-left: 380px;
       }
       div > div > ul {
-        //  margin-left: 4px;
+        margin-left: 4px;
         li {
           display: block;
           h4 {
             font-size: 15px;
           }
           ul {
-            // margin-left: -20px;
+            margin-left: -20px;
             li {
               display: block;
               font-size: 13px;
@@ -130,6 +130,7 @@ export const HeaderMain = styled.div`
     height: 450px;
     background-color: #fff;
     color: #000;
+    z-index: 999;
     ul {
       li {
         nav > img {
@@ -210,7 +211,7 @@ export const slideDiv = styled.div`
   position: relative;
   display: inline-flex;
   transform: translateX(${(props) => props.left}px);
-  transition: transform 0.6s;
+  transition: 0.6s;
 `;
 export const swiperSlideWrapper = styled.div`
   margin: 0;
@@ -222,22 +223,27 @@ export const swiperSlideWrapper = styled.div`
   margin-right: 1000px;
   overflow: hidden;
 `;
+export const mini = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  p {
+    width: 150px;
+    transform: rotate(-90deg);
+    background-color: red;
+    color: #000;
+    z-index: 90;
+  }
+`;
 export const swiperSlide = styled.div`
   width: 1247.88px;
   height: 100%;
   position: relative;
-  p {
-    transform: rotate(90deg);
-    background-color: red;
-    margin-left: -1226px;
-    margin-bottom: 60px;
-    color: #000;
-    z-index: 90;
-  }
+
   img {
     width: 552px;
     height: 552px;
-    margin-top: -100px;
+    margin-top: -70px;
     margin-left: 10px;
   }
 `;
@@ -307,7 +313,6 @@ export const rostingPlant = styled.div`
       width: 30px;
       height: 30px;
       filter: invert(50%);
-
     }
   }
   h4 {
@@ -335,7 +340,6 @@ export const BrandSupportPage = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-
 `;
 export const BrandSupportMaindev = styled.div`
   width: 1312px;

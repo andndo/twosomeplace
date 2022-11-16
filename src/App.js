@@ -337,6 +337,49 @@ function App() {
       <a href={endInnerContentAdress[index]}>{list}</a>
     </li>
   ));
+  const brandSupportImg1 = [
+    "https://www.twosome.co.kr/resources/images/main/main_brand1.jpg",
+    "https://www.twosome.co.kr/resources/images/main/main_brand2.jpg",
+    "https://www.twosome.co.kr/resources/images/main/main_brand3.jpg",
+    "https://www.twosome.co.kr/resources/images/main/main_brand4.jpg",
+    "https://www.twosome.co.kr/resources/images/main/main_brand1.jpg",
+  ];
+  const brandSupportImg2 = [
+    "https://www.twosome.co.kr/resources/images/main/ico_brand1.svg",
+    "https://www.twosome.co.kr/resources/images/main/ico_brand2.svg",
+    "https://www.twosome.co.kr/resources/images/main/ico_brand3.svg",
+    "https://www.twosome.co.kr/resources/images/main/ico_brand4.svg",
+    "https://www.twosome.co.kr/resources/images/main/ico_brand1.svg",
+  ];
+  const brandSupportA = [
+    "로스팅 플랜트",
+    "디저트 플랜트",
+    "C&D센터",
+    "SEP센터",
+    "로스팅플랜트",
+  ];
+  const brandSupportH4 = [
+    "원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의 커피 품질을 만듭니다.",
+    "최고의 맛과 품질을 자랑하는 투썸플레이스의 디저트를 만듭니다.",
+    "창의성을 바탕으로 고부가가치 제품 개발과 원가경쟁력을 갖춘 제품 체계를 만들어 고객의 만족도를 높이고, 더욱 투썸플레이스답게 만들어주는 곳입니다.",
+    "투썸플레이스 SEP센터는 브랜드 가치를 만들어 내는 전문가 육성 센터입니다.",
+    "원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의 커피 품질을 만듭니다.",
+  ];
+  const brandSupportList = brandSupportImg1.map((list, index) => {
+    <S.swiperSlide>
+      <img src={list} />
+      <S.swiperSlideSub>
+        <img src={brandSupportImg2[index]} className="Beans" />
+        <S.rostingPlant>
+          <a>
+            {brandSupportA[index]}
+            <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+          </a>
+          <h4>{brandSupportH4[index]}</h4>
+        </S.rostingPlant>
+      </S.swiperSlideSub>
+    </S.swiperSlide>;
+  });
   return (
     <>
       <S.HeaderMain>
@@ -353,7 +396,13 @@ function App() {
                 <ul class="inner">
                   <li>
                     <h4>투썸플레이스</h4>
-                    <ul>{introduceTwosomeList}</ul>
+                    <ul>
+                      <li>비전체계</li>
+                      <li>연혁</li>
+                      <li>BI</li>
+                      <li>20주년 이야기</li>
+                      <li>Recruit</li>
+                    </ul>
                   </li>
                   <li>
                     <h4>매장</h4>
@@ -361,6 +410,7 @@ function App() {
                       <li>DY/DI</li>
                     </ul>
                   </li>
+                  <br />
                   <li>
                     <h4>브랜드 브로슈어</h4>
                   </li>
@@ -373,7 +423,17 @@ function App() {
             <nav className="text">메뉴이야기</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">{MenuStoryHeaderList}</ul>
+                <ul class="inner">
+                  <li>
+                    <h4>커피이야기</h4>
+                  </li>
+                  <li>
+                    <h4>디저트이야기</h4>
+                  </li>
+                  <li>
+                    <h4>델리이야기</h4>
+                  </li>
+                </ul>
               </div>
             </div>
           </li>
@@ -382,7 +442,20 @@ function App() {
             <nav className="text">브랜드 지원</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">{BrandSupportHeaderList}</ul>
+                <ul class="inner">
+                  <li>
+                    <h4>어썸 페어링 플랜트</h4>
+                  </li>
+                  <li>
+                    <h4>어썸 디저트 플랜트</h4>
+                  </li>
+                  <li>
+                    <h4>C&D센터</h4>
+                  </li>
+                  <li>
+                    <h4>SEP센터</h4>
+                  </li>
+                </ul>
               </div>
             </div>
           </li>
@@ -451,6 +524,7 @@ function App() {
           </li>
         </ul>
       </S.HeaderMain>
+
       <S.btnContainer>
         <S.buyingBtn>
           <p>기업 단체 구매</p>
@@ -587,7 +661,6 @@ function App() {
           <S.swiperSlideWrapper>
             <S.slideDiv left={(MenuClickNum - 1) * 1247 * -1}>
               <S.swiperSlide>
-                <p>____Roasting Plant</p>
                 <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
                 <S.swiperSlideSub>
                   <img
@@ -607,7 +680,6 @@ function App() {
                 </S.swiperSlideSub>
               </S.swiperSlide>
               <S.swiperSlide>
-                <p>____Roasting Plant</p>
                 <img src="https://www.twosome.co.kr/resources/images/main/main_brand2.jpg" />
                 <S.swiperSlideSub>
                   <img
@@ -628,7 +700,6 @@ function App() {
                 </S.swiperSlideSub>
               </S.swiperSlide>
               <S.swiperSlide>
-                <p>____Roasting Plant</p>
                 <img src="https://www.twosome.co.kr/resources/images/main/main_brand3.jpg" />
                 <S.swiperSlideSub>
                   <img
@@ -655,7 +726,6 @@ function App() {
                 </S.swiperSlideSub>
               </S.swiperSlide>
               <S.swiperSlide>
-                <p>____Roasting Plant</p>
                 <img src="https://www.twosome.co.kr/resources/images/main/main_brand4.jpg" />
                 <S.swiperSlideSub>
                   <img
@@ -675,7 +745,6 @@ function App() {
                 </S.swiperSlideSub>
               </S.swiperSlide>
               <S.swiperSlide>
-                <p>____Roasting Plant</p>
                 <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
                 <S.swiperSlideSub>
                   <img

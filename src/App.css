@@ -5,10 +5,9 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-.directionKey{
-
+.directionKey {
 }
-.controlImg2{
+.controlImg2 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -44,7 +43,7 @@ body {
   filter: invert(100%);
 }
 
-.custom-btn:after {
+.custom-btn::before {
   position: absolute;
   content: "";
   width: 0;
@@ -62,7 +61,7 @@ body {
 .custom-btn:hover {
   color: #fff;
 }
-.custom-btn:hover:after {
+.custom-btn:hover::before {
   left: 0;
   width: 100%;
 }
