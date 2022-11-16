@@ -218,9 +218,8 @@ export const swiperSlideWrapper = styled.div`
   height: 520px;
   position: absolute;
   top: 230px;
-  left: 560px;
+  left: 600px;
   margin-right: 1000px;
-  background-color: green;
   overflow: hidden;
 `;
 export const swiperSlide = styled.div`
@@ -233,6 +232,7 @@ export const swiperSlide = styled.div`
     margin-left: -1226px;
     margin-bottom: 60px;
     color: #000;
+    z-index: 90;
   }
   img {
     width: 552px;
@@ -287,8 +287,7 @@ export const swiperDiv3 = styled.div`
 `;
 export const swiperSlideSub = styled.div`
   width: 312px;
-  height: 342px;
-  background-color: purple;
+  height: 372px;
   position: absolute;
   bottom: 0;
   left: 634px;
@@ -307,6 +306,8 @@ export const rostingPlant = styled.div`
     img {
       width: 30px;
       height: 30px;
+      filter: invert(50%);
+
     }
   }
   h4 {
@@ -332,16 +333,16 @@ export const BrandSupportPage = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-  background-color: blue;
   display: flex;
   justify-content: center;
+
 `;
 export const BrandSupportMaindev = styled.div`
   width: 1312px;
   height: 100%;
-
-  background-color: orange;
+  position: relative;
   h1 {
+    z-index: 100;
     font-size: 96px;
     font-weight: 800;
     margin-top: 155px;
@@ -726,7 +727,7 @@ export const coffeeNameBox2 = styled.div`
   div {
     font-size: 16px;
     font-weight: 600;
-    color: #999;
+    color: #fff;
   }
 `;
 export const newsPage = styled.div`

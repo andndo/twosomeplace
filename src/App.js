@@ -584,13 +584,6 @@ function App() {
           </div>
         </S.A_list_img>
         <S.BrandSupportPage>
-          <S.BrandSupportMaindev>
-            <h1>
-              BRAND
-              <br />
-              SUPPORT<div className="red-point"></div>
-            </h1>
-          </S.BrandSupportMaindev>
           <S.swiperSlideWrapper>
             <S.slideDiv left={(MenuClickNum - 1) * 1247 * -1}>
               <S.swiperSlide>
@@ -636,20 +629,47 @@ function App() {
               </S.swiperSlide>
               <S.swiperSlide>
                 <p>____Roasting Plant</p>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand3.jpg" />
                 <S.swiperSlideSub>
                   <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand3.svg"
                     className="Beans"
                   />
                   <S.rostingPlant>
                     <a>
-                      로스팅 플랜트
+                      C&D센터
                       <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
                     </a>
                     <h4>
-                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
-                      최고의 커피 품질을 만듭니다.
+                      창의성을 바탕으로 고부가가치 제품
+                      <br />
+                      개발과 원가경쟁력을 갖춘 제품 체계를
+                      <br />
+                      만들어 고객의 만족도를 높이고,
+                      <br />
+                      더욱 투썸플레이스답게 만들어주는
+                      <br />
+                      곳입니다.
+                    </h4>
+                  </S.rostingPlant>
+                </S.swiperSlideSub>
+              </S.swiperSlide>
+              <S.swiperSlide>
+                <p>____Roasting Plant</p>
+                <img src="https://www.twosome.co.kr/resources/images/main/main_brand4.jpg" />
+                <S.swiperSlideSub>
+                  <img
+                    src="https://www.twosome.co.kr/resources/images/main/ico_brand4.svg"
+                    className="Beans"
+                  />
+                  <S.rostingPlant>
+                    <a>
+                      SEP센터
+                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
+                    </a>
+                    <h4>
+                      투썸플레이스 SEP센터는 브랜드 가치를 만들어 내는 전문가
+                      육성 센터입니다.
                     </h4>
                   </S.rostingPlant>
                 </S.swiperSlideSub>
@@ -675,6 +695,7 @@ function App() {
                 </S.swiperSlideSub>
               </S.swiperSlide>
             </S.slideDiv>
+
             <S.swiperDiv3>
               <nav>
                 <S.leftBtn2 onClick={MenuBarLeftClick}>
@@ -695,6 +716,13 @@ function App() {
               </nav>
             </S.swiperDiv3>
           </S.swiperSlideWrapper>
+          <S.BrandSupportMaindev>
+            <h1>
+              BRAND
+              <br />
+              SUPPORT<div className="red-point"></div>
+            </h1>
+          </S.BrandSupportMaindev>
         </S.BrandSupportPage>
 
         <S.franchisePage>
