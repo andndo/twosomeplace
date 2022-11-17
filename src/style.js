@@ -625,14 +625,30 @@ export const MenuStoryMainDiv = styled.div`
   }
   nav {
     margin-left: 55px;
+
     div {
       margin-bottom: 28px;
+      
+    }
+    .Main{
       p {
         font-size: 15px;
         color: #000;
         font-weight: 900;
       }
       a {
+        font-size: 32px;
+        font-weight: 900;
+      }
+    }
+    .Remaining{
+      p {
+        font-size: 15px;
+        color: gray;
+        font-weight: 900;
+      }
+      a {
+        color:gray;
         font-size: 32px;
         font-weight: 900;
       }
