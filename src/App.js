@@ -365,7 +365,7 @@ function App() {
     "투썸플레이스 SEP센터는 브랜드 가치를 만들어 내는 전문가 육성 센터입니다.",
     "원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지, 최고의 커피 품질을 만듭니다.",
   ];
-  const brandSupportList = brandSupportImg1.map((list, index) => {
+  const brandSupportList = brandSupportImg1.map((list, index) => (
     <S.swiperSlide>
       <img src={list} />
       <S.swiperSlideSub>
@@ -378,8 +378,8 @@ function App() {
           <h4>{brandSupportH4[index]}</h4>
         </S.rostingPlant>
       </S.swiperSlideSub>
-    </S.swiperSlide>;
-  });
+    </S.swiperSlide>
+  ));
   return (
     <>
       <S.HeaderMain>
@@ -660,109 +660,7 @@ function App() {
         <S.BrandSupportPage>
           <S.swiperSlideWrapper>
             <S.slideDiv left={(MenuClickNum - 1) * 1247 * -1}>
-              <S.swiperSlide>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
-                <S.swiperSlideSub>
-                  <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
-                    className="Beans"
-                  />
-                  <S.rostingPlant>
-                    <a>
-                      로스팅 플랜트
-                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                    </a>
-                    <h4>
-                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
-                      최고의 커피 품질을 만듭니다.
-                    </h4>
-                  </S.rostingPlant>
-                </S.swiperSlideSub>
-              </S.swiperSlide>
-              <S.swiperSlide>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand2.jpg" />
-                <S.swiperSlideSub>
-                  <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand2.svg"
-                    className="Beans"
-                  />
-                  <S.desertPlant>
-                    <a>
-                      디저트 플랜트
-                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                    </a>
-                    <h4>
-                      최고의 맛과 품질을 자랑하는
-                      <br />
-                      투썸플레이스의 디저트를 만듭니다.
-                    </h4>
-                  </S.desertPlant>
-                </S.swiperSlideSub>
-              </S.swiperSlide>
-              <S.swiperSlide>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand3.jpg" />
-                <S.swiperSlideSub>
-                  <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand3.svg"
-                    className="Beans"
-                  />
-                  <S.rostingPlant>
-                    <a>
-                      C&D센터
-                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                    </a>
-                    <h4>
-                      창의성을 바탕으로 고부가가치 제품
-                      <br />
-                      개발과 원가경쟁력을 갖춘 제품 체계를
-                      <br />
-                      만들어 고객의 만족도를 높이고,
-                      <br />
-                      더욱 투썸플레이스답게 만들어주는
-                      <br />
-                      곳입니다.
-                    </h4>
-                  </S.rostingPlant>
-                </S.swiperSlideSub>
-              </S.swiperSlide>
-              <S.swiperSlide>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand4.jpg" />
-                <S.swiperSlideSub>
-                  <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand4.svg"
-                    className="Beans"
-                  />
-                  <S.rostingPlant>
-                    <a>
-                      SEP센터
-                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                    </a>
-                    <h4>
-                      투썸플레이스 SEP센터는 브랜드 가치를 만들어 내는 전문가
-                      육성 센터입니다.
-                    </h4>
-                  </S.rostingPlant>
-                </S.swiperSlideSub>
-              </S.swiperSlide>
-              <S.swiperSlide>
-                <img src="https://www.twosome.co.kr/resources/images/main/main_brand1.jpg" />
-                <S.swiperSlideSub>
-                  <img
-                    src="https://www.twosome.co.kr/resources/images/main/ico_brand1.svg"
-                    className="Beans"
-                  />
-                  <S.rostingPlant>
-                    <a>
-                      로스팅 플랜트
-                      <img src="https://www.twosome.co.kr/resources/images/main/ico_arrow_right.svg" />
-                    </a>
-                    <h4>
-                      원두 로스팅부터 고객의 손에 들리는 한 잔의 커피까지,
-                      최고의 커피 품질을 만듭니다.
-                    </h4>
-                  </S.rostingPlant>
-                </S.swiperSlideSub>
-              </S.swiperSlide>
+              {brandSupportList}
             </S.slideDiv>
 
             <S.swiperDiv3>
