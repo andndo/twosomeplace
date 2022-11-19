@@ -1,6 +1,11 @@
+@font-face {
+  font-family: Noto-Sans;
+  src: url(./asset/NotoSansKR-Medium.otf);
+}
 body {
   margin: 0;
   overflow-x: hidden;
+  font-family: Noto-Sans;
 }
 ::-webkit-scrollbar {
   display: none;
