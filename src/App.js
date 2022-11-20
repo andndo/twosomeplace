@@ -322,6 +322,18 @@ function App() {
       <h4>{list}</h4>
     </li>;
   });
+  const BrandSupportHeader2 = [
+    "가맹점 개설 안내",
+    "창업설명회",
+    "온라인 창업상담신청",
+    "FAQ",
+    "가맹점 전용 금융상품",
+  ];
+  const BrandSupportHeaderList2 = BrandSupportHeader2.map((list) => {
+    <li>
+      <h4>{list}</h4>
+    </li>;
+  });
   const endInnerContentAdress = [
     "https://www.twosome.co.kr/cp/bulkOrderinquiry.do",
     "https://www.twosome.co.kr/so/storeStartupCounselApply.do",
@@ -396,13 +408,7 @@ function App() {
                 <ul class="inner">
                   <li>
                     <h4>투썸플레이스</h4>
-                    <ul>
-                      <li>비전체계</li>
-                      <li>연혁</li>
-                      <li>BI</li>
-                      <li>20주년 이야기</li>
-                      <li>Recruit</li>
-                    </ul>
+                    <ul>{introduceTwosomeList}</ul>
                   </li>
                   <li>
                     <h4>매장</h4>
@@ -423,17 +429,7 @@ function App() {
             <nav className="text">메뉴이야기</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">
-                  <li>
-                    <h4>커피이야기</h4>
-                  </li>
-                  <li>
-                    <h4>디저트이야기</h4>
-                  </li>
-                  <li>
-                    <h4>델리이야기</h4>
-                  </li>
-                </ul>
+                <ul class="inner">{MenuStoryHeaderList}</ul>
               </div>
             </div>
           </li>
@@ -442,20 +438,7 @@ function App() {
             <nav className="text">브랜드 지원</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">
-                  <li>
-                    <h4>어썸 페어링 플랜트</h4>
-                  </li>
-                  <li>
-                    <h4>어썸 디저트 플랜트</h4>
-                  </li>
-                  <li>
-                    <h4>C&D센터</h4>
-                  </li>
-                  <li>
-                    <h4>SEP센터</h4>
-                  </li>
-                </ul>
+                <ul class="inner">{BrandSupportHeader}</ul>
               </div>
             </div>
           </li>
@@ -482,23 +465,7 @@ function App() {
             <nav className="text">가맹점 창업</nav>
             <div class="item__contents">
               <div class="contents__menu">
-                <ul class="inner">
-                  <li>
-                    <h4>가맹점 개설 안내</h4>
-                  </li>
-                  <li>
-                    <h4>창업설명회</h4>
-                  </li>
-                  <li>
-                    <h4>온라인 창업상담신청</h4>
-                  </li>
-                  <li>
-                    <h4>FAQ</h4>
-                  </li>
-                  <li>
-                    <h4>가맹점 전용 금융상품</h4>
-                  </li>
-                </ul>
+                <ul class="inner">{BrandSupportHeaderList2}</ul>
               </div>
             </div>
           </li>

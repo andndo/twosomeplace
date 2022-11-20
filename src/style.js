@@ -834,7 +834,7 @@ export const btnContainer = styled.div`
   flex-direction: column;
   right: 32px;
   bottom: 32px;
-  z-index: 1;
+  z-index: 200;
 `;
 export const upBtn = styled.button`
   transition: 0.5s all;
