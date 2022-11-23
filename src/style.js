@@ -628,27 +628,14 @@ export const MenuStoryMainDiv = styled.div`
 
     div {
       margin-bottom: 28px;
-      
     }
-    .Main{
-      p {
-        font-size: 15px;
-        color: #000;
-        font-weight: 900;
-      }
-      a {
-        font-size: 32px;
-        font-weight: 900;
-      }
-    }
-    .Remaining{
+    .Story {
       p {
         font-size: 15px;
         color: gray;
         font-weight: 900;
       }
       a {
-        color:gray;
         font-size: 32px;
         font-weight: 900;
       }

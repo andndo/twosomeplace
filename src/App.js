@@ -12,6 +12,20 @@ function App() {
   const [pagenum, setPagenum] = useState("01");
   const outerDivRef = useRef();
   const imgRef = useRef();
+  const [showMenu, setShowMenu] = useState([
+    {
+      menu: false,
+      id: "menu1",
+    },
+    {
+      menu: false,
+      id: "menu2",
+    },
+    {
+      menu: false,
+      id: "menu3",
+    },
+  ]);
   const [bodo, setBodo] = useState(true);
   const [gongy, setGongy] = useState(false);
   useEffect(() => {
@@ -286,16 +300,26 @@ function App() {
     }
   };
   const MenuOnClick = (event) => {
-    event.key === "1" ? (
-      <S.MenuStroyClickDiv>
-        <p>asdf</p>
-        <a>fweaawe</a>
-      </S.MenuStroyClickDiv>
-    ) : (
-      <S.MenuStroyNoneClickDiv>
-        <a>afsdew</a>
-      </S.MenuStroyNoneClickDiv>
+    // console.log(event.target.id);
+    // event.target.id === "menu1" ? (
+    //   <S.MenuStroyClickDiv>
+    //     <p>asdf</p>
+    //     <a>fweaawe</a>
+    //   </S.MenuStroyClickDiv>
+    // ) : (
+    //   <S.MenuStroyNoneClickDiv>
+    //     <a>afsdew</a>
+    //   </S.MenuStroyNoneClickDiv>
+    // );
+
+    setShowMenu(
+      showMenu.map((menu) =>
+        menu.id === event.target.id
+          ? { ...menu, menu: true }
+          : { ...menu, menu: false }
+      )
     );
+    console.log(showMenu);
   };
   const introduceTwosome = [
     "비전체계",
@@ -586,17 +610,23 @@ function App() {
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
             <nav>
-              <div onClick={MenuOnClick} className="Main" key="1">
+              <div onClick={MenuOnClick} className="Story">
                 <p>전문가의 섬세함으로 완성한 최상의 커피</p>
-                <a>COFFEE STORY</a>
+                <a id="menu1" style={showMenu[0].menu ? { color: "#000" } : {color: "#999999"}}>
+                  COFFEE STORY
+                </a>
               </div>
-              <div onClick={MenuOnClick} className="Remaining" key="2">
+              <div onClick={MenuOnClick} className="Story">
                 <p>다양한 프리미엄 케이크 & 디저트</p>
-                <a>DESSERT STORY</a>
+                <a id="menu2" style={showMenu[1].menu ? { color: "#000" } : {color: "#999999"}}>
+                  DESSERT STORY
+                </a>
               </div>
-              <div onClick={MenuOnClick} className="Remaining" key="3">
+              <div onClick={MenuOnClick} className="Story">
                 <p>가볍게 즐기는 맛있는 식사, 델리</p>
-                <a>DELI STORY</a>
+                <a id="menu3" style={showMenu[2].menu ? { color: "#000" } : {color: "#999999"}}>
+                  DELI STORY
+                </a>
               </div>
             </nav>
           </S.MenuStoryMainDiv>
