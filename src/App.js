@@ -167,22 +167,6 @@ function App() {
     });
     setNumber(10);
   };
-  const selectBodo = () => {
-    document.getElementById("Bodo").style.textDecoration = "underline";
-    document.getElementById("Bodo").style.color = "red";
-  };
-  const selectGongy = () => {
-    document.getElementById("Gongy").style.textDecoration = "underline";
-    document.getElementById("Gongy").style.color = "red";
-  };
-  const notBodo = () => {
-    document.getElementById("Bodo").style.textDecoration = "none";
-    document.getElementById("Bodo").style.color = "black";
-  };
-  const notGongy = () => {
-    document.getElementById("Gongy").style.textDecoration = "none";
-    document.getElementById("Gongy").style.color = "black";
-  };
 
   const coffeeSlides = [
     "https://www.twosome.co.kr/resources/images/main/menu_coffee2.jpg",
@@ -611,20 +595,56 @@ function App() {
             <div className="red-point"></div>
             <nav>
               <div onClick={MenuOnClick} className="Story">
-                <p>전문가의 섬세함으로 완성한 최상의 커피</p>
-                <a id="menu1" style={showMenu[0].menu ? { color: "#000" } : {color: "#999999"}}>
+                <p
+                  id="menu1"
+                  style={showMenu[0].menu ? { opacity: "1" } : { opacity: "0" }}
+                >
+                  전문가의 섬세함으로 완성한 최상의 커피
+                </p>
+                <a
+                  id="menu1"
+                  style={
+                    showMenu[0].menu
+                      ? { color: "#000", textDecoration: "underline" }
+                      : { color: "#999999" }
+                  }
+                >
                   COFFEE STORY
                 </a>
               </div>
               <div onClick={MenuOnClick} className="Story">
-                <p>다양한 프리미엄 케이크 & 디저트</p>
-                <a id="menu2" style={showMenu[1].menu ? { color: "#000" } : {color: "#999999"}}>
+                <p
+                  id="menu2"
+                  style={showMenu[1].menu ? { opacity: "1" } : { opacity: "0" }}
+                >
+                  다양한 프리미엄 케이크 & 디저트
+                </p>
+                <a
+                  id="menu2"
+                  style={
+                    showMenu[1].menu
+                      ? { color: "#000", textDecoration: "underline" }
+                      : { color: "#999999" }
+                  }
+                >
                   DESSERT STORY
                 </a>
               </div>
               <div onClick={MenuOnClick} className="Story">
-                <p>가볍게 즐기는 맛있는 식사, 델리</p>
-                <a id="menu3" style={showMenu[2].menu ? { color: "#000" } : {color: "#999999"}}>
+                <p
+                  id="menu3"
+                  style={showMenu[2].menu ? { opacity: "1" } : { opacity: "0" }}
+                >
+                  가볍게 즐기는 맛있는 식사, 델리
+                </p>
+                <a
+                  id="menu3"
+                  style={
+                    showMenu[2].menu
+                      ? { color: "#000", textDecoration: "underline" }
+                      : { color: "#999999" }
+                  }
+                >
                   DELI STORY
                 </a>
               </div>

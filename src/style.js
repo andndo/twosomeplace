@@ -632,7 +632,6 @@ export const MenuStoryMainDiv = styled.div`
     .Story {
       p {
         font-size: 15px;
-        color: gray;
         font-weight: 900;
       }
       a {
