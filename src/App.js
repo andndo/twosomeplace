@@ -284,18 +284,6 @@ function App() {
     }
   };
   const MenuOnClick = (event) => {
-    // console.log(event.target.id);
-    // event.target.id === "menu1" ? (
-    //   <S.MenuStroyClickDiv>
-    //     <p>asdf</p>
-    //     <a>fweaawe</a>
-    //   </S.MenuStroyClickDiv>
-    // ) : (
-    //   <S.MenuStroyNoneClickDiv>
-    //     <a>afsdew</a>
-    //   </S.MenuStroyNoneClickDiv>
-    // );
-
     setShowMenu(
       showMenu.map((menu) =>
         menu.id === event.target.id
@@ -399,6 +387,33 @@ function App() {
         </S.rostingPlant>
       </S.swiperSlideSub>
     </S.swiperSlide>
+  ));
+
+  const MenuStoryP = [
+    "전문가의 섬세함으로 완성된 최상의 커피",
+    "다양한 프리미엄 & 디저트",
+    "가볍게 즐기는 맛있는 식사, 델리",
+  ];
+  const MenuStoryA = ["COFFEE STORY", "DESSERT STOTY", "DELI STORY"];
+  const MenuStoryList = MenuStoryP.map((list, index) => (
+    <div onClick={MenuOnClick} className="Story">
+      <p
+        id="menu1"
+        style={showMenu[index].menu ? { opacity: "1" } : { opacity: "0" }}
+      >
+        {list}
+      </p>
+      <a
+        id="menu1"
+        style={
+          showMenu[index].menu
+            ? { color: "#000", textDecoration: "underline" }
+            : { color: "#999999" }
+        }
+      >
+        {MenuStoryA[index]}
+      </a>
+    </div>
   ));
   return (
     <>
@@ -594,7 +609,8 @@ function App() {
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
             <nav>
-              <div onClick={MenuOnClick} className="Story">
+              {MenuStoryList}
+              {/* <div onClick={MenuOnClick} className="Story">
                 <p
                   id="menu1"
                   style={showMenu[0].menu ? { opacity: "1" } : { opacity: "0" }}
@@ -647,7 +663,7 @@ function App() {
                 >
                   DELI STORY
                 </a>
-              </div>
+              </div> */}
             </nav>
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
