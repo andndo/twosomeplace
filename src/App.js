@@ -174,7 +174,18 @@ function App() {
     "https://www.twosome.co.kr/resources/images/main/menu_coffee4.jpg",
     "https://www.twosome.co.kr/resources/images/main/menu_coffee1.jpg",
   ];
-
+  const dessertSlides = [
+    "https://www.twosome.co.kr/resources/images/main/menu_dessert2.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_dessert3.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_dessert4.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_dessert1.jpg",
+  ];
+  const deliSlides = [
+    "https://www.twosome.co.kr/resources/images/main/menu_deli2.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_deli3.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_deli4.jpg",
+    "https://www.twosome.co.kr/resources/images/main/menu_deli1.jpg",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const coffeeName = [
     "롱블랙",
@@ -182,6 +193,19 @@ function App() {
     "스트로베리 피치 프라페",
     "스페니쉬 연유라떼",
   ];
+  const dessertName = [
+    "스트로베리 초콜릿 생크림",
+    "마스카포네 티라미수",
+    "레드벨벳",
+    "뉴욕 치즈 케이크",
+  ];
+  const deliName = [
+    "B.E.L.T.샌드위치",
+    "페스토 햄치즈 파니니",
+    "클래식 루벤",
+    "그릴드 치킨 샐러드",
+  ];
+  
   const a = 1;
   const coffeeCurrentList = coffeeSlides.map((list, index) =>
     index === currentIndex ? (
@@ -394,17 +418,18 @@ function App() {
     "다양한 프리미엄 & 디저트",
     "가볍게 즐기는 맛있는 식사, 델리",
   ];
+  const MenuStoryID = ["menu1", "menu2", "menu3"];
   const MenuStoryA = ["COFFEE STORY", "DESSERT STOTY", "DELI STORY"];
   const MenuStoryList = MenuStoryP.map((list, index) => (
     <div onClick={MenuOnClick} className="Story">
       <p
-        id="menu1"
+        id={MenuStoryID[index]}
         style={showMenu[index].menu ? { opacity: "1" } : { opacity: "0" }}
       >
         {list}
       </p>
       <a
-        id="menu1"
+        id={MenuStoryID[index]}
         style={
           showMenu[index].menu
             ? { color: "#000", textDecoration: "underline" }
@@ -608,63 +633,7 @@ function App() {
           <S.MenuStoryMainDiv>
             <h1>MENU STORY</h1>
             <div className="red-point"></div>
-            <nav>
-              {MenuStoryList}
-              {/* <div onClick={MenuOnClick} className="Story">
-                <p
-                  id="menu1"
-                  style={showMenu[0].menu ? { opacity: "1" } : { opacity: "0" }}
-                >
-                  전문가의 섬세함으로 완성한 최상의 커피
-                </p>
-                <a
-                  id="menu1"
-                  style={
-                    showMenu[0].menu
-                      ? { color: "#000", textDecoration: "underline" }
-                      : { color: "#999999" }
-                  }
-                >
-                  COFFEE STORY
-                </a>
-              </div>
-              <div onClick={MenuOnClick} className="Story">
-                <p
-                  id="menu2"
-                  style={showMenu[1].menu ? { opacity: "1" } : { opacity: "0" }}
-                >
-                  다양한 프리미엄 케이크 & 디저트
-                </p>
-                <a
-                  id="menu2"
-                  style={
-                    showMenu[1].menu
-                      ? { color: "#000", textDecoration: "underline" }
-                      : { color: "#999999" }
-                  }
-                >
-                  DESSERT STORY
-                </a>
-              </div>
-              <div onClick={MenuOnClick} className="Story">
-                <p
-                  id="menu3"
-                  style={showMenu[2].menu ? { opacity: "1" } : { opacity: "0" }}
-                >
-                  가볍게 즐기는 맛있는 식사, 델리
-                </p>
-                <a
-                  id="menu3"
-                  style={
-                    showMenu[2].menu
-                      ? { color: "#000", textDecoration: "underline" }
-                      : { color: "#999999" }
-                  }
-                >
-                  DELI STORY
-                </a>
-              </div> */}
-            </nav>
+            <nav>{MenuStoryList}</nav>
           </S.MenuStoryMainDiv>
         </S.MenuStoryPage>
 
