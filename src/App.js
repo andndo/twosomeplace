@@ -205,7 +205,7 @@ function App() {
     "클래식 루벤",
     "그릴드 치킨 샐러드",
   ];
-  
+
   const a = 1;
   const coffeeCurrentList = coffeeSlides.map((list, index) =>
     index === currentIndex ? (
@@ -418,18 +418,17 @@ function App() {
     "다양한 프리미엄 & 디저트",
     "가볍게 즐기는 맛있는 식사, 델리",
   ];
-  const MenuStoryID = ["menu1", "menu2", "menu3"];
   const MenuStoryA = ["COFFEE STORY", "DESSERT STOTY", "DELI STORY"];
   const MenuStoryList = MenuStoryP.map((list, index) => (
     <div onClick={MenuOnClick} className="Story">
       <p
-        id={MenuStoryID[index]}
+        id={"menu" + (index + 1)}
         style={showMenu[index].menu ? { opacity: "1" } : { opacity: "0" }}
       >
         {list}
       </p>
       <a
-        id={MenuStoryID[index]}
+        id={"menu" + (index + 1)}
         style={
           showMenu[index].menu
             ? { color: "#000", textDecoration: "underline" }
