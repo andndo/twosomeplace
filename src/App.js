@@ -217,9 +217,7 @@ function App() {
   const coffeeList = coffeeSlides.map((list, index) =>
     index === currentIndex ? <></> : <S.otherImg src={list} />
   );
-  const coffeeNameList = coffeeName.map((list, index) => (
-    <div>{index === currentIndex ? list : ""}</div>
-  ));
+ 
   const onClickMenuRight = () => {
     if (currentIndex >= 3) setCurrentIndex(0);
     else setCurrentIndex(currentIndex + 1);
@@ -317,6 +315,16 @@ function App() {
     );
     console.log(showMenu);
   };
+  const coffeeNameList = coffeeName.map((list, index) => (
+    <div>{index === currentIndex ? list : ""}</div>
+  ));
+  const desertNameList = dessertName.map((list, index) => (
+    <div>{index === currentIndex ? list : ""}</div>
+  ));
+  const deliList = deliName.map((list, index) => (
+    <div>{index === currentIndex ? list : ""}</div>
+  ));
+  
   const introduceTwosome = [
     "비전체계",
     "연혁",
@@ -617,7 +625,7 @@ function App() {
                   />
                 </S.leftBtn>
                 <S.coffeeNameBox>
-                  <nav>{coffeeNameList}</nav>
+                  <nav>{menu.map((list)=>(if(list.menu===true){return coffeeNameList}))}</nav>
                 </S.coffeeNameBox>
                 <S.rightBtn2 onClick={onClickMenuRight}>
                   <img
